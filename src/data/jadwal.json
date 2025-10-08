@@ -1,0 +1,162 @@
+{
+  "Senin": [
+    {
+      "urutan": 1,
+      "mataPelajaran": "Matematika",
+      "waktuMulai": "07:00",
+      "waktuSelesai": "08:30"
+    },
+    {
+      "urutan": 2,
+      "mataPelajaran": "Bahasa Indonesia",
+      "waktuMulai": "08:30",
+      "waktuSelesai": "10:00"
+    },
+    {
+      "urutan": 3,
+      "mataPelajaran": "Kimia",
+      "waktuMulai": "10:00",
+      "waktuSelesai": "11:30"
+    },
+    {
+      "urutan": 4,
+      "mataPelajaran": "Bahasa Inggris",
+      "waktuMulai": "12:30",
+      "waktuSelesai": "14:00"
+    },
+    {
+      "urutan": 5,
+      "mataPelajaran": "Informatika",
+      "waktuMulai": "14:00",
+      "waktuSelesai": "15:00"
+    }
+  ],
+  "Selasa": [
+    {
+      "urutan": 1,
+      "mataPelajaran": "Fisika",
+      "waktuMulai": "07:00",
+      "waktuSelesai": "08:30"
+    },
+    {
+      "urutan": 2,
+      "mataPelajaran": "Sejarah",
+      "waktuMulai": "08:30",
+      "waktuSelesai": "10:00"
+    },
+    {
+      "urutan": 3,
+      "mataPelajaran": "Biologi",
+      "waktuMulai": "10:00",
+      "waktuSelesai": "11:30"
+    },
+    {
+      "urutan": 4,
+      "mataPelajaran": "Matematika",
+      "waktuMulai": "12:30",
+      "waktuSelesai": "14:00"
+    },
+    {
+      "urutan": 5,
+      "mataPelajaran": "Seni Budaya",
+      "waktuMulai": "14:00",
+      "waktuSelesai": "15:00"
+    }
+  ],
+  "Rabu": [
+    {
+      "urutan": 1,
+      "mataPelajaran": "Bahasa Inggris",
+      "waktuMulai": "07:00",
+      "waktuSelesai": "08:30"
+    },
+    {
+      "urutan": 2,
+      "mataPelajaran": "Ekonomi",
+      "waktuMulai": "08:30",
+      "waktuSelesai": "10:00"
+    },
+    {
+      "urutan": 3,
+      "mataPelajaran": "Geografi",
+      "waktuMulai": "10:00",
+      "waktuSelesai": "11:30"
+    },
+    {
+      "urutan": 4,
+      "mataPelajaran": "Kimia",
+      "waktuMulai": "12:30",
+      "waktuSelesai": "14:00"
+    },
+    {
+      "urutan": 5,
+      "mataPelajaran": "Pendidikan Jasmani",
+      "waktuMulai": "14:00",
+      "waktuSelesai": "15:00"
+    }
+  ],
+  "Kamis": [
+    {
+      "urutan": 1,
+      "mataPelajaran": "Matematika",
+      "waktuMulai": "07:00",
+      "waktuSelesai": "08:30"
+    },
+    {
+      "urutan": 2,
+      "mataPelajaran": "Fisika",
+      "waktuMulai": "08:30",
+      "waktuSelesai": "10:00"
+    },
+    {
+      "urutan": 3,
+      "mataPelajaran": "Bahasa Indonesia",
+      "waktuMulai": "10:00",
+      "waktuSelesai": "11:30"
+    },
+    {
+      "urutan": 4,
+      "mataPelajaran": "Sosiologi",
+      "waktuMulai": "12:30",
+      "waktuSelesai": "14:00"
+    },
+    {
+      "urutan": 5,
+      "mataPelajaran": "Informatika",
+      "waktuMulai": "14:00",
+      "waktuSelesai": "15:00"
+    }
+  ],
+  "Jumat": [
+    {
+      "urutan": 1,
+      "mataPelajaran": "Pendidikan Agama",
+      "waktuMulai": "07:00",
+      "waktuSelesai": "08:30"
+    },
+    {
+      "urutan": 2,
+      "mataPelajaran": "Bahasa Inggris",
+      "waktuMulai": "08:30",
+      "waktuSelesai": "10:00"
+    },
+    {
+      "urutan": 3,
+      "mataPelajaran": "Biologi",
+      "waktuMulai": "10:00",
+      "waktuSelesai": "11:30"
+    },
+    {
+      "urutan": 4,
+      "mataPelajaran": "Matematika",
+      "waktuMulai": "12:30",
+      "waktuSelesai": "14:00"
+    },
+    {
+      "urutan": 5,
+      "mataPelajaran": "Prakarya",
+      "waktuMulai": "14:00",
+      "waktuSelesai": "15:00"
+    }
+  ]
+}
