@@ -5,7 +5,7 @@ export function WaliKelas() {
     <section id="wali-kelas" className="py-20 bg-white dark:bg-dark-100 transition-colors duration-500">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-primary-700 dark:text-primary-300 mb-12">
-          Wali Kelas Kami
+          Wali Kelas Kami (Sang Guardian In Class)
         </h2>
 
         <div className="max-w-4xl mx-auto">

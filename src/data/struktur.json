@@ -1,56 +1,50 @@
 [
   {
     "id": 1,
-    "nama": "Ahmad Rizki Pratama",
+    "nama": "Nailla Rahma",
     "jabatan": "Ketua Kelas",
-    "fotoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200"
+    "fotoUrl": "/assets/images/naila1.jpeg"
   },
   {
     "id": 2,
-    "nama": "Siti Aisyah Putri",
+    "nama": "Zulfaa Kamiliyya",
     "jabatan": "Wakil Ketua",
-    "fotoUrl": "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200"
+    "fotoUrl": "/assets/images/julpa.jpeg"
   },
   {
     "id": 3,
-    "nama": "Dina Kartika Sari",
-    "jabatan": "Sekretaris",
-    "fotoUrl": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200"
+    "nama": "Ditan Aulia M",
+    "jabatan": "Sekretaris 1",
+    "fotoUrl": "/assets/images/ditan.jpeg"
   },
   {
     "id": 4,
-    "nama": "Putri Maharani",
-    "jabatan": "Bendahara",
-    "fotoUrl": "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=200"
+    "nama": "Retno W",
+    "jabatan": "Bendahara 1",
+    "fotoUrl": "/assets/images/retnoo.jpeg"
   },
   {
     "id": 5,
-    "nama": "Reza Fadillah",
-    "jabatan": "Koordinator Kebersihan",
-    "fotoUrl": "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=200"
+    "nama": "Stevanny Cecilia",
+    "jabatan": "Bendahara 2",
+    "fotoUrl": "/assets/images/vanny.jpeg"
   },
   {
     "id": 6,
-    "nama": "Lina Marliana",
-    "jabatan": "Koordinator Olahraga",
-    "fotoUrl": "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=200"
+    "nama": "Aqeylla Balqis",
+    "jabatan": "Sekretaris 2",
+    "fotoUrl": "/assets/images/aqella.jpeg"
   },
   {
     "id": 7,
-    "nama": "Fatimah Azzahra",
-    "jabatan": "Koordinator Rohani",
-    "fotoUrl": "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=200"
+    "nama": "Carlo Julio",
+    "jabatan": "Koordinator Olahraga",
+    "fotoUrl": "/assets/images/carlo.jpeg"
   },
   {
     "id": 8,
-    "nama": "Budi Santoso",
+    "nama": "Wildan Nur A",
     "jabatan": "Koordinator IT",
-    "fotoUrl": "https://images.pexels.com/photos/1516644/pexels-photo-1516644.jpeg?auto=compress&cs=tinysrgb&w=200"
-  },
-  {
-    "id": 9,
-    "nama": "Dewi Anggraini",
-    "jabatan": "Koordinator Humas",
-    "fotoUrl": "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=200"
+    "fotoUrl": "/assets/images/wildan.png"
   }
 ]

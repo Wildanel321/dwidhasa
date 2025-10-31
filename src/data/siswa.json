@@ -1,290 +1,290 @@
 [
   {
     "id": 1,
-    "nama": "Ahmad Rizki Pratama",
-    "jenisKelamin": "Laki-laki",
-    "fotoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/ahmadrizki",
-    "tiktok": "https://tiktok.com/@ahmadrizki"
+    "nama": "Nadin Aprilia",
+    "jenisKelamin": "Perempuan",
+    "fotoUrl": "/assets/images/nadin.jpeg",
+    "instagram": "https://instagram.com/nadinpriliya",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 2,
-    "nama": "Siti Aisyah Putri",
+    "nama": "Nova Lita Ayu Kirani",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/sitiaisyah",
-    "tiktok": "https://tiktok.com/@sitiaisyah"
+    "fotoUrl": "/assets/images/nov.jpeg",
+    "instagram": "https://instagram.com/@vaa_nooo",
+    "tiktok": ""
   },
   {
     "id": 3,
-    "nama": "Dina Kartika Sari",
-    "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/dinakartika",
-    "tiktok": "https://tiktok.com/@dinakartika"
+    "nama": "DM Ramadhani Kurniawan",
+    "jenisKelamin": "Laki-laki",
+    "fotoUrl": "/assets/images/rama.jpeg",
+    "instagram": "https://instagram.com/@ramdnkn__",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 4,
-    "nama": "Putri Maharani",
-    "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/putrimaharani",
-    "tiktok": "https://tiktok.com/@putrimaharani"
+    "nama": "Vrishabha Carlo Julio A",
+    "jenisKelamin": "Laki-laki",
+    "fotoUrl": "/assets/images/calk.jpeg",
+    "instagram": "https://instagram.com/@carlojulio02",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 5,
-    "nama": "Reza Fadillah",
-    "jenisKelamin": "Laki-laki",
-    "fotoUrl": "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/rezafadillah",
-    "tiktok": "https://tiktok.com/@rezafadillah"
+    "nama": "Khanza Fairus Heart",
+    "jenisKelamin": "Perempuan",
+    "fotoUrl": "/assets/images/heart.jpeg",
+    "instagram": "https://www.instagram.com/faympire?igsh=MXF2YnU1M3NxdzIydg==",
+    "tiktok": "https://tiktok.com"
   },
   {
     "id": 6,
-    "nama": "Lina Marliana",
+    "nama": "Miratus Rosidah",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/linamarliana",
-    "tiktok": "https://tiktok.com/@linamarliana"
+    "fotoUrl": "/assets/images/mirra.jpeg",
+    "instagram": "https://instagram.com/@mra_rsdh",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 7,
-    "nama": "Fatimah Azzahra",
+    "nama": "Nailla Rahma Erdamya P",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/fatimahazzahra",
-    "tiktok": "https://tiktok.com/@fatimahazzahra"
+    "fotoUrl": "/assets/images/naila2.jpeg",
+    "instagram": "https://instagram.com/@rahm4aerneii",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 8,
-    "nama": "Budi Santoso",
-    "jenisKelamin": "Laki-laki",
-    "fotoUrl": "https://images.pexels.com/photos/1516644/pexels-photo-1516644.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/budisantoso",
-    "tiktok": "https://tiktok.com/@budisantoso"
+    "nama": "Retno wahyu Tri Utami",
+    "jenisKelamin": "Perempuan",
+    "fotoUrl": "/assets/images/retno.jpeg",
+    "instagram": "https://instagram.com/@eretnoo",
+    "tiktok": "https://tiktok.com/@"
   },
   {
     "id": 9,
-    "nama": "Dewi Anggraini",
+    "nama": "Amania Alfi Husni S",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/dewianggraini",
-    "tiktok": "https://tiktok.com/@dewianggraini"
+    "fotoUrl": "/assets/images/amania.jpeg",
+    "instagram": "https://instagram.com/@amania.salsabila",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 10,
-    "nama": "Maya Safitri",
+    "nama": "Stevanny Cecilia Nur Balqis",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1310522/pexels-photo-1310522.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/mayasafitri",
-    "tiktok": "https://tiktok.com/@mayasafitri"
+    "fotoUrl": "/assets/images/vanny.jpeg",
+    "instagram": "https://instagram.com/@stpnnycclia",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 11,
-    "nama": "Rina Susanti",
+    "nama": "Davina Ajeng Pratiwi",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/rinasusanti",
-    "tiktok": "https://tiktok.com/@rinasusanti"
+    "fotoUrl": "/assets/images/davina.jpeg",
+    "instagram": "https://instagram.com/davinaajeng_",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 12,
-    "nama": "Tari Wulandari",
+    "nama": "Shelviana Nur Cahyani",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/tariwulandari",
-    "tiktok": "https://tiktok.com/@tariwulandari"
+    "fotoUrl": "/assets/images/selvi.jpeg",
+    "instagram": "https://instagram.com/@sh3llpiianaaa",
+    "tiktok": "https://tiktok.com/@nihaochyie_"
   },
   {
     "id": 13,
-    "nama": "Anisa Rahmawati",
+    "nama": "Renata Beta Saputri",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/anisarahmawati",
-    "tiktok": "https://tiktok.com/@anisarahmawati"
+    "fotoUrl": "/assets/images/beta.jpeg",
+    "instagram": "https://instagram.com/renatabetaa_",
+    "tiktok": "https://tiktok.com/@"
   },
   {
     "id": 14,
-    "nama": "Nurul Hidayah",
+    "nama": "Ditan Aulia Mentari",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=200",
+    "fotoUrl": "/assets/images/ditan.jpeg",
     "instagram": "https://instagram.com/nurulhidayah",
     "tiktok": "https://tiktok.com/@nurulhidayah"
   },
   {
     "id": 15,
-    "nama": "Sri Wahyuni",
+    "nama": "Resti Dwi Novitasari",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/sriwahyuni",
-    "tiktok": "https://tiktok.com/@sriwahyuni"
+    "fotoUrl": "/assets/images/resti.jpeg",
+    "instagram": "https://instagram.com/@restydwi12_",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 16,
-    "nama": "Indah Permatasari",
+    "nama": "Naura Viana Sari",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/indahpermata",
+    "fotoUrl": "/assets/images/gsdh.png",
+    "instagram": "https://instagram.com/@nauraviana2510",
     "tiktok": "https://tiktok.com/@indahpermata"
   },
   {
     "id": 17,
-    "nama": "Yuli Astuti",
+    "nama": "Zulfaa Kamiliyya",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/yuliastuti",
-    "tiktok": "https://tiktok.com/@yuliastuti"
+    "fotoUrl": "/assets/images/julpa.jpeg",
+    "instagram": "https://instagram.com/@djoulepa",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 18,
-    "nama": "Eka Fitriani",
+    "nama": "Adis Melisya Kaelasari",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/ekafitriani",
-    "tiktok": "https://tiktok.com/@ekafitriani"
+    "fotoUrl": "/assets/images/adis.jpeg",
+    "instagram": "https://instagram.com/Adis_melisya",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 19,
-    "nama": "Wulan Dari",
-    "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1181562/pexels-photo-1181562.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/wulandari",
-    "tiktok": "https://tiktok.com/@wulandari"
+    "nama": "Wildan Nur Awaludin",
+    "jenisKelamin": "Laki-laki",
+    "fotoUrl": "/assets/images/wildan.png",
+    "instagram": "https://instagram.com/wildanelgato",
+    "tiktok": "https://tiktok.com/@wildanelgato2"
   },
   {
     "id": 20,
-    "nama": "Laila Maharani",
+    "nama": "Bilqis Lintang Delinda",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/lailamaharani",
-    "tiktok": "https://tiktok.com/@lailamaharani"
+    "fotoUrl": "/assets/images/bilqis.jpeg",
+    "instagram": "https://instagram.com/@blqsdlndaa",
+    "tiktok": "https://tiktok.com/@blqsdlndaa"
   },
   {
     "id": 21,
-    "nama": "Ratna Sari",
+    "nama": "Hilda Mailinda",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1090387/pexels-photo-1090387.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/ratnasari",
-    "tiktok": "https://tiktok.com/@ratnasari"
+    "fotoUrl": "/assets/images/hilda.jpeg",
+    "instagram": "https://instagram.com/@hildamailinda",
+    "tiktok": "https://tiktok.com/@Mailin 🌷"
   },
   {
     "id": 22,
-    "nama": "Sari Dewi",
+    "nama": "Elisa Ananda Putri",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/saridewi",
-    "tiktok": "https://tiktok.com/@saridewi"
+    "fotoUrl": "/assets/images/elisa.jpeg",
+    "instagram": "https://instagram.com/lxczaa_",
+    "tiktok": "https://tiktok.com/@"
   },
   {
     "id": 23,
-    "nama": "Ayu Lestari",
+    "nama": "Dina Maulidatu Ulya",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/ayulestari",
-    "tiktok": "https://tiktok.com/@ayulestari"
+    "fotoUrl": "/assets/images/dina.jpeg",
+    "instagram": "https://instagram.com/dinaamaulidaa",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 24,
-    "nama": "Mega Puspita",
+    "nama": "Nama tidak di temukan",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1310474/pexels-photo-1310474.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/megapuspita",
-    "tiktok": "https://tiktok.com/@megapuspita"
+    "fotoUrl": "/assets/images/boneka.jpeg",
+    "instagram": "https://instagram.com/its.caull",
+    "tiktok": "https://tiktok.com/@orang_hilang3"
   },
   {
     "id": 25,
-    "nama": "Vina Amalia",
+    "nama": "Jesisca Mareta A",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1197132/pexels-photo-1197132.jpeg?auto=compress&cs=tinysrgb&w=200",
+    "fotoUrl": "/assets/images/jejej.jpeg",
     "instagram": "https://instagram.com/vinaamalia",
     "tiktok": "https://tiktok.com/@vinaamalia"
   },
   {
     "id": 26,
-    "nama": "Fitri Handayani",
+    "nama": "Nessa Nasila Inka N",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/fitrihandayani",
-    "tiktok": "https://tiktok.com/@fitrihandayani"
+    "fotoUrl": "/assets/images/nessa.jpeg",
+    "instagram": "https://instagram.com/nsaa_nvrt",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 27,
-    "nama": "Rini Wijayanti",
+    "nama": "Inggrit Rahayu S",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1080213/pexels-photo-1080213.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/riniwijayanti",
-    "tiktok": "https://tiktok.com/@riniwijayanti"
+    "fotoUrl": "/assets/images/inggrit.jpeg",
+    "instagram": "https://instagram.com/_ingg.ra",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 28,
-    "nama": "Desi Ratnasari",
+    "nama": "Cheryl Kartika S",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1130623/pexels-photo-1130623.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/desiratnasari",
-    "tiktok": "https://tiktok.com/@desiratnasari"
+    "fotoUrl": "/assets/images/cher.jpeg",
+    "instagram": "https://instagram.com/cheryl_ks.22",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 29,
-    "nama": "Amel Kurnia",
+    "nama": "Viona Lhia A",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/amelkurnia",
-    "tiktok": "https://tiktok.com/@amelkurnia"
+    "fotoUrl": "/assets/images/viona.jpeg",
+    "instagram": "https://instagram.com/@_vvienda",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 30,
-    "nama": "Nadia Febrina",
-    "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/nadiafebrina",
-    "tiktok": "https://tiktok.com/@nadiafebrina"
+    "nama": "Alfian Widyatama",
+    "jenisKelamin": "Laki-laki",
+    "fotoUrl": "/assets/images/alfian.jpeg",
+    "instagram": "https://instagram.com/@alfian_widyatamaa",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 31,
-    "nama": "Bella Safira",
+    "nama": "I Luh Rara Bunga U",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1372129/pexels-photo-1372129.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/bellasafira",
-    "tiktok": "https://tiktok.com/@bellasafira"
+    "fotoUrl": "/assets/images/iluh.jpeg",
+    "instagram": "https://instagram.com/@bbingrraa_",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 32,
-    "nama": "Zahra Kamila",
+    "nama": "Aqeylla Balqis A S",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/zahrakamila",
-    "tiktok": "https://tiktok.com/@zahrakamila"
+    "fotoUrl": "/assets/images/aqella.jpeg",
+    "instagram": "https://instagram.com/@kikkill.laa",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 33,
-    "nama": "Farhan Maulana",
-    "jenisKelamin": "Laki-laki",
-    "fotoUrl": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/farhanmaulana",
+    "nama": "Putri Nur Laili F",
+    "jenisKelamin": "Perempuan",
+    "fotoUrl": "/assets/images/putri.jpeg",
+    "instagram": "https://instagram.com/_putriinna",
     "tiktok": "https://tiktok.com/@farhanmaulana"
   },
   {
     "id": 34,
-    "nama": "Sinta Aprilia",
+    "nama": "Zhafira Rivanka",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1337477/pexels-photo-1337477.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/sintaaprilia",
-    "tiktok": "https://tiktok.com/@sintaaprilia"
+    "fotoUrl": "/assets/images/zapira.jpeg",
+    "instagram": "https://www.instagram.com/zhfrvnkaa_?igsh=bDNuemJmdTd4aXpy",
+    "tiktok": "https://tiktok.com/"
   },
   {
     "id": 35,
-    "nama": "Intan Purnama",
+    "nama": "Nilsa Sandra Wijaya",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1832959/pexels-photo-1832959.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/intanpurnama",
+    "fotoUrl": "/assets/images/nama.jpeg",
+    "instagram": "https://instagram.com/@ciatw0",
     "tiktok": "https://tiktok.com/@intanpurnama"
   },
   {
     "id": 36,
-    "nama": "Tiara Kusuma",
+    "nama": "Nur Mala Maylynda",
     "jenisKelamin": "Perempuan",
-    "fotoUrl": "https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=200",
-    "instagram": "https://instagram.com/tiarakusuma",
-    "tiktok": "https://tiktok.com/@tiarakusuma"
+    "fotoUrl": "/assets/images/mala.jpeg",
+    "instagram": "https://instagram.com/mly.mellynd_",
+    "tiktok": "https://tiktok.com/"
   }
 ]

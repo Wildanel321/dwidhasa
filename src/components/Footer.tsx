@@ -7,9 +7,9 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-2">Kelas Dwi Dhasa</h3>
+            <h3 className="text-2xl font-bold mb-2">Class Of Dwi Dhasa</h3>
             <p className="text-primary-200 dark:text-gray-400">
-              Kelas Unggulan dengan Semangat & Kreativitas
+              1 hati 36 jiwa Dwi Dhasa Sukses Bersama
             </p>
           </div>
 
@@ -37,7 +37,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-white/20 dark:border-gray-700 text-center">
           <p className="text-primary-200 dark:text-gray-400 flex items-center justify-center gap-2">
-            <span>2025 Kelas Dwi Dhasa</span>
+            <span>2025 Dwi Dhasa</span>
             <span>—</span>
             <span className="flex items-center gap-1">
               Dibuat dengan Semangat dan Kreativitas

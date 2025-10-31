@@ -12,13 +12,13 @@ export function JadwalPiket() {
               Jadwal Piket
             </h2>
           </div>
-          <p className="text-gray-600 dark:text-gray-400">6 Kelompok Piket Kelas</p>
+          <p className="text-gray-600 dark:text-gray-400">5 Kelompok Piket Kelas</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {piketData.map((kelompok, index) => (
             <div
-              key={kelompok.kelompok}
+              key={kelompok.hari}
               className="bg-white dark:bg-dark-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
               style={{ animationDelay: `${index * 50}ms` }}
             >
@@ -27,7 +27,7 @@ export function JadwalPiket() {
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                     <Sparkles className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold">Kelompok {kelompok.kelompok}</h3>
+                  <h3 className="text-2xl font-bold">Kelompok {kelompok.hari}</h3>
                 </div>
               </div>
 

@@ -4,7 +4,7 @@ import classData from '../data/classData.json';
 
 export function Hero() {
   const [displayText, setDisplayText] = useState('');
-  const fullText = 'Kelas Dwi Dhasa';
+  const fullText = 'Dwi Dhasa';
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
