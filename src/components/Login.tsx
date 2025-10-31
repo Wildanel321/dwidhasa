@@ -41,7 +41,7 @@ export function Login() {
       await signInWithEmail(email, password);
     } catch (error) {
       // Show beautiful error popup for wrong admin password
-      if (email === 'admin@dwidhasa.com') {
+      if (email === 'admin@lifewildsmp.my.id') {
         showErrorPopup('🔐 Admin Access Denied', 'The admin password you entered is incorrect. Please try again with the correct credentials.');
       } else {
         showErrorPopup('❌ Login Failed', 'Invalid email or password. Please check your credentials and try again.');
