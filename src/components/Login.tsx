@@ -37,8 +37,53 @@ export function Login() {
   const handleEmailSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsAnimating(true);
-    await signInWithEmail(email, password);
+    try {
+      await signInWithEmail(email, password);
+    } catch (error) {
+      // Show beautiful error popup for wrong admin password
+      if (email === 'admin@dwidhasa.com') {
+        showErrorPopup('🔐 Admin Access Denied', 'The admin password you entered is incorrect. Please try again with the correct credentials.');
+      } else {
+        showErrorPopup('❌ Login Failed', 'Invalid email or password. Please check your credentials and try again.');
+      }
+    }
     setIsAnimating(false);
+  };
+
+  const showErrorPopup = (title: string, message: string) => {
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in';
+    overlay.id = 'error-popup-overlay';
+
+    // Create popup content
+    const popup = document.createElement('div');
+    popup.className = 'bg-gradient-to-br from-red-900 via-red-800 to-pink-900 rounded-2xl shadow-2xl p-8 max-w-md w-full border border-red-400/30 animate-scale-in';
+
+    popup.innerHTML = `
+      <div class="text-center">
+        <div class="mx-auto h-16 w-16 bg-gradient-to-br from-red-400 to-pink-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+          <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">${title}</h3>
+        <p class="text-red-200 mb-6">${message}</p>
+        <button class="px-6 py-3 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg" onclick="document.getElementById('error-popup-overlay').remove()">
+          Try Again
+        </button>
+      </div>
+    `;
+
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+
+    // Auto remove after 10 seconds
+    setTimeout(() => {
+      if (document.getElementById('error-popup-overlay')) {
+        document.getElementById('error-popup-overlay')!.remove();
+      }
+    }, 10000);
   };
 
   if (loading) {
@@ -210,8 +255,28 @@ export function Login() {
           )}
         </div>
 
-        <div className="text-center text-sm text-emerald-300 animate-fade-in-up animation-delay-500">
-          🌿 By entering, you embrace the spirit of nature and creativity 🌿
+        <div className="text-center space-y-4 animate-fade-in-up animation-delay-500">
+          <div className="text-sm text-emerald-300">
+            🌿 By entering, you embrace the spirit of nature and creativity 🌿
+          </div>
+          <div className="flex justify-center space-x-4">
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-200 rounded-lg transition-colors duration-200 text-sm font-medium border border-emerald-400/30"
+            >
+              🔄 Refresh Page
+            </button>
+            <button
+              onClick={() => {
+                localStorage.clear();
+                sessionStorage.clear();
+                window.location.reload();
+              }}
+              className="px-4 py-2 bg-orange-600/20 hover:bg-orange-600/30 text-orange-200 rounded-lg transition-colors duration-200 text-sm font-medium border border-orange-400/30"
+            >
+              🗑️ Reset & Refresh
+            </button>
+          </div>
         </div>
       </div>
     </div>

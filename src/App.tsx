@@ -39,14 +39,27 @@ function App() {
     );
   }
 
-  if (isAdmin) {
-    return (
-      <Routes>
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="*" element={<AdminDashboard />} />
-      </Routes>
-    );
-  }
+  return (
+    <Routes>
+      <Route path="/admin" element={isAdmin ? <AdminDashboard /> : <Hero />} />
+      <Route path="*" element={
+        <div className="min-h-screen bg-white dark:bg-dark-100 transition-colors duration-500">
+          <Toast />
+          <DarkModeToggle />
+          <DhasaBot />
+
+          <Hero />
+          <WaliKelas />
+          <StrukturKelas />
+          <DaftarSiswa />
+          <JadwalPelajaran />
+          <JadwalPiket />
+          <Galeri />
+          <Footer />
+        </div>
+      } />
+    </Routes>
+  );
 
   return (
     <div className="min-h-screen bg-white dark:bg-dark-100 transition-colors duration-500">

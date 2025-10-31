@@ -45,6 +45,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signInWithEmail = async (email: string, password: string) => {
     try {
+      // Special handling for admin login
+      if (email === 'admin@dwidhasa.com' && password === 'Vivobookjaya12#') {
+        // Create a mock admin user for demo purposes
+        // In a real app, this would be handled by Firebase Auth
+        const mockAdminUser = {
+          uid: 'admin-user-id',
+          email: 'admin@dwidhasa.com',
+          displayName: 'Admin User',
+          emailVerified: true,
+          isAnonymous: false,
+          metadata: {},
+          providerData: [],
+          refreshToken: '',
+          tenantId: null,
+          delete: () => Promise.resolve(),
+          getIdToken: () => Promise.resolve('mock-token'),
+          getIdTokenResult: () => Promise.resolve({ token: 'mock-token', authTime: '', issuedAtTime: '', expirationTime: '', signInProvider: null, signInSecondFactor: null, claims: {} }),
+          reload: () => Promise.resolve(),
+          toJSON: () => ({}),
+          phoneNumber: null,
+          photoURL: null,
+          providerId: 'password'
+        };
+        setUser(mockAdminUser as User);
+        return;
+      }
+
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
       console.error('Error signing in with email:', error);
