@@ -34,7 +34,17 @@
     "judul": "Circle ",
     "fotoUrl": "/assets/images/wedoan.jpeg",
     "tanggal": "2025-10-16"
+  },
+   {
+    "id": 5,
+    "judul": "SOEMPAH PEMOEDA",
+    "fotoUrl": "/assets/images/sumpah.jpeg",
+    "tanggal": "2025-10-28"
+  },
+   {
+    "id": 5,
+    "judul": "Pra Tka",
+    "fotoUrl": "/assets/images/tka.jpeg",
+    "tanggal": "2025-10-31"
   }
-  
-
 ]

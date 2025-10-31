@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Instagram, Music } from 'lucide-react';
+import { AuthButtons } from './AuthButtons';
 import classData from '../data/classData.json';
 
 export function Hero() {
@@ -25,7 +26,10 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-100 via-white to-primary-50 dark:from-dark-100 dark:via-dark-50 dark:to-primary-900 transition-colors duration-500">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-100 via-white to-primary-50 dark:from-dark-100 dark:via-dark-50 dark:to-primary-900 transition-colors duration-500 relative">
+      <div className="absolute top-4 right-4 z-10">
+        <AuthButtons />
+      </div>
       <div className="container mx-auto px-6 py-20 text-center animate-fade-in">
         <h1 className="text-6xl md:text-7xl font-bold text-primary-700 dark:text-primary-300 mb-4 min-h-[80px]">
           {displayText}
