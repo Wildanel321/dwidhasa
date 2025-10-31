@@ -26,8 +26,8 @@ function App() {
     );
   }
 
-  // Check if user is admin (you can modify this logic based on your admin criteria)
-  const isAdmin = user?.email === 'admin@lifewildsmp.my.id' || user?.email?.endsWith('@lifewildsmp.my.id');
+  // Check if user is admin
+  const isAdmin = user?.email === 'admin@lifewildsmp.my.id';
 
   if (!user) {
     return (
