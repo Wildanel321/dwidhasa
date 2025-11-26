@@ -35,16 +35,46 @@
     "fotoUrl": "/assets/images/wedoan.jpeg",
     "tanggal": "2025-10-16"
   },
-   {
-    "id": 5,
+     {
+    "id": 7,
     "judul": "SOEMPAH PEMOEDA",
     "fotoUrl": "/assets/images/sumpah.jpeg",
     "tanggal": "2025-10-28"
   },
    {
-    "id": 5,
+    "id": 8,
     "judul": "Pra Tka",
     "fotoUrl": "/assets/images/tka.jpeg",
     "tanggal": "2025-10-31"
+  },
+  {
+    "id": 9,
+    "judul": "Foto Ijazah",
+    "fotoUrl": "/assets/images/fotoijazah.jpg",
+    "tanggal": "2025-10-28"
+  },
+  {
+    "id": 10,
+    "judul": "Tobat Masss",
+    "fotoUrl": "/assets/images/tobatmas.jpg",
+    "tanggal": "2025-10-28"
+  },
+  {
+    "id": 11,
+    "judul": "Teacher Dayy",
+    "fotoUrl": "/assets/images/Teacher.jpg",
+    "tanggal": "2025-10-28"
+  },
+  {
+    "id": 12,
+    "judul": "Pra Teacher Day",
+    "fotoUrl": "/assets/images/pra.jpg",
+    "tanggal": "2025-10-28"
+  },
+  {
+    "id": 13,
+    "judul": "Healing dulu bolo",
+    "fotoUrl": "/assets/images/healing.jpg",
+    "tanggal": "2025-10-28"
   }
 ]
