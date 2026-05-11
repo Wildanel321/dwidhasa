@@ -13,7 +13,7 @@ export function DhasaBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: 'Halo, aku DhasaBot! Mau tahu jadwal hari ini atau struktur kelas?',
+      text: 'Halo, aku DhasaBot! Kamu bisa tanya jadwal hari ini, info kelas, atau pengetahuan umum lainnya. Mau tahu apa?',
       isBot: true,
     },
   ]);
@@ -71,15 +71,51 @@ export function DhasaBot() {
       return `TikTok kelas: ${classData.socialMedia.tiktok}\nJangan lupa follow ya!`;
     }
 
+    // Pengetahuan Umum & Fun Facts
+    if (lowerQuery.includes('ibu kota') || lowerQuery.includes('ibukota')) {
+      return 'Ibu kota Indonesia saat ini adalah Jakarta, namun sedang dalam proses pindah ke Nusantara (IKN) di Kalimantan.';
+    }
+
+    if (lowerQuery.includes('presiden')) {
+      return 'Presiden Republik Indonesia saat ini adalah Prabowo Subianto.';
+    }
+
+    if (lowerQuery.includes('pancasila')) {
+      return 'Pancasila adalah dasar negara Indonesia:\n1. Ketuhanan Yang Maha Esa\n2. Kemanusiaan yang adil dan beradab\n3. Persatuan Indonesia\n4. Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan\n5. Keadilan sosial bagi seluruh rakyat Indonesia.';
+    }
+
+    if (lowerQuery.includes('fakta') || lowerQuery.includes('tahu gak')) {
+      const facts = [
+        'Tahukah kamu? Indonesia adalah negara kepulauan terbesar di dunia dengan lebih dari 17.000 pulau.',
+        'Tahukah kamu? Candi Borobudur adalah candi Buddha terbesar di dunia.',
+        'Tahukah kamu? Komodo adalah kadal terbesar di dunia dan hanya ada di Indonesia.',
+        'Tahukah kamu? Indonesia memiliki garis pantai terpanjang kedua di dunia.',
+        'Tahukah kamu? Bunga Rafflesia Arnoldii adalah bunga terbesar di dunia yang ditemukan di Indonesia.'
+      ];
+      return facts[Math.floor(Math.random() * facts.length)];
+    }
+
+    if (lowerQuery.includes('merdeka') || lowerQuery.includes('kemerdekaan')) {
+      return 'Indonesia memproklamasikan kemerdekaan pada tanggal 17 Agustus 1945.';
+    }
+
+    if (lowerQuery.includes('lagu kebangsaan') || lowerQuery.includes('indonesia raya')) {
+      return 'Lagu kebangsaan Indonesia adalah Indonesia Raya, yang diciptakan oleh W.R. Supratman.';
+    }
+
+    if (lowerQuery.includes('siapa kamu') || lowerQuery.includes('apa itu dhasabot')) {
+      return 'Aku adalah DhasaBot, asisten virtual Kelas Dwi Dhasa yang siap membantu memberikan info kelas atau sekadar berbagi pengetahuan umum!';
+    }
+
     if (lowerQuery.includes('halo') || lowerQuery.includes('hai') || lowerQuery.includes('hi')) {
-      return 'Halo juga! Ada yang bisa aku bantu? Kamu bisa tanya tentang jadwal, struktur kelas, atau info lainnya.';
+      return 'Halo juga! Ada yang bisa aku bantu? Kamu bisa tanya tentang jadwal, struktur kelas, atau pengetahuan umum seperti Presiden atau Ibu Kota.';
     }
 
     if (lowerQuery.includes('terima kasih') || lowerQuery.includes('thanks')) {
       return 'Sama-sama! Senang bisa membantu. Ada yang lain?';
     }
 
-    return 'Maaf, aku belum mengerti pertanyaanmu. Coba tanya tentang:\n- Jadwal pelajaran hari ini\n- Struktur kelas\n- Wali kelas\n- Instagram/TikTok kelas';
+    return 'Maaf, aku belum mengerti pertanyaanmu. Coba tanya tentang:\n- Jadwal pelajaran hari ini\n- Struktur kelas\n- Pengetahuan umum (Presiden, Ibu Kota, Pancasila)\n- Beri aku fakta unik';
   };
 
   const handleSend = () => {

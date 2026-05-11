@@ -71,7 +71,7 @@ export function DaftarSiswa() {
                         <Instagram className="w-6 h-6 text-black" />
                       </a>
                     )}
-                    {siswa.tiktok && (
+                    {siswa.tiktok && siswa.tiktok.replace(/^https?:\/\/(www\.)?tiktok\.com\/?/, '').length > 0 && siswa.tiktok.replace(/^https?:\/\/(www\.)?tiktok\.com\/?/, '') !== '@' && (
                       <a
                         href={siswa.tiktok}
                         target="_blank"
