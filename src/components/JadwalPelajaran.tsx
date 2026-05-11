@@ -11,28 +11,30 @@ export function JadwalPelajaran() {
   const [selectedDay, setSelectedDay] = useState<Hari>('Senin');
 
   return (
-    <section id="jadwal" className="py-20 bg-white dark:bg-dark-100 transition-colors duration-500">
+    <section id="jadwal" className="py-24 transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Calendar className="w-10 h-10 text-primary-600 dark:text-primary-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-700 dark:text-primary-300">
-              Jadwal Pelajaran
-            </h2>
+        <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+          <div>
+            <div className="inline-block bg-brutalist-lime border-4 border-black px-6 py-2 shadow-brutalist mb-4 -rotate-1">
+              <h2 className="text-3xl md:text-5xl font-black text-black uppercase tracking-tighter">
+                STUDY TIME
+              </h2>
+            </div>
+            <p className="text-xl font-bold text-black dark:text-gray-300">WAKTU BELAJAR: 07:00 - 15:00</p>
           </div>
-          <p className="text-gray-600 dark:text-gray-400">Waktu Belajar: 07:00 - 15:00</p>
+          <Calendar className="w-20 h-20 text-brutalist-pink hidden md:block" />
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
+          <div className="flex gap-4 mb-12 overflow-x-auto pb-4 scrollbar-hide">
             {days.map((day) => (
               <button
                 key={day}
                 onClick={() => setSelectedDay(day)}
-                className={`px-6 py-3 rounded-xl font-semibold whitespace-nowrap transition-all duration-200 ${
+                className={`px-8 py-4 border-4 border-black font-black uppercase transition-all duration-200 whitespace-nowrap ${
                   selectedDay === day
-                    ? 'bg-primary-500 text-white shadow-lg scale-105'
-                    : 'bg-gray-200 dark:bg-dark-50 text-gray-700 dark:text-gray-300 hover:bg-primary-200 dark:hover:bg-primary-800'
+                    ? 'bg-brutalist-yellow translate-x-1 translate-y-1 shadow-none'
+                    : 'bg-brutalist-white dark:bg-dark-50 text-black dark:text-white shadow-brutalist hover:shadow-brutalist-hover hover:translate-x-0.5 hover:translate-y-0.5'
                 }`}
               >
                 {day}
@@ -40,34 +42,32 @@ export function JadwalPelajaran() {
             ))}
           </div>
 
-          <div className="space-y-4 animate-fade-in">
+          <div className="space-y-6 animate-fade-in">
             {jadwal[selectedDay].map((pelajaran, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-dark-50 dark:to-primary-900 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                className="relative group"
               >
-                <div className="flex items-center p-6 gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-primary-500 dark:bg-primary-700 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform">
+                <div className="absolute inset-0 bg-black translate-x-2 translate-y-2" />
+                <div className="relative bg-brutalist-white dark:bg-dark-50 border-4 border-black p-6 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-brutalist-purple border-4 border-black flex items-center justify-center text-black font-black text-2xl shadow-brutalist group-hover:rotate-6 transition-transform">
                     {pelajaran.urutan}
                   </div>
 
-                  <div className="flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
+                  <div className="flex-grow text-center md:text-left">
+                    <h3 className="text-2xl md:text-3xl font-black text-black dark:text-white uppercase tracking-tighter mb-1">
                       {pelajaran.mataPelajaran}
                     </h3>
-                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                      <Clock className="w-4 h-4" />
+                    <div className="flex items-center justify-center md:justify-start gap-2 text-black/60 dark:text-white/60 font-bold uppercase text-sm">
+                      <Clock className="w-5 h-5" />
                       <span>
                         {pelajaran.waktuMulai} - {pelajaran.waktuSelesai}
                       </span>
                     </div>
                   </div>
 
-                  <div className="hidden md:block flex-shrink-0 text-right">
-                    <div className="text-sm text-gray-500 dark:text-gray-400">Durasi</div>
-                    <div className="text-lg font-semibold text-primary-600 dark:text-primary-400">
-                      90 menit
-                    </div>
+                  <div className="flex-shrink-0 bg-brutalist-blue border-2 border-black px-4 py-2 shadow-brutalist">
+                    <p className="text-xs font-black text-black uppercase">90 MIN SESSION</p>
                   </div>
                 </div>
               </div>

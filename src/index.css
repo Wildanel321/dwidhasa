@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brutalist-white text-brutalist-black selection:bg-brutalist-lime selection:text-brutalist-black;
+    background-image: radial-gradient(#000000 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+  }
+
+  .dark body {
+    @apply bg-dark-100 text-white selection:bg-brutalist-yellow selection:text-brutalist-black;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 0.5px, transparent 0.5px);
+  }
+}
+
+@layer components {
+  .btn-brutalist {
+    @apply px-6 py-3 border-4 border-black font-bold transition-all duration-200 active:translate-x-1 active:translate-y-1 active:shadow-none;
+  }
+}

@@ -17,6 +17,16 @@ export default {
           800: '#002c8c',
           900: '#001d66',
         },
+        brutalist: {
+          lime: '#A3E635',
+          yellow: '#FBBF24',
+          pink: '#F472B6',
+          blue: '#60A5FA',
+          red: '#F87171',
+          purple: '#C084FC',
+          white: '#FFFFFF',
+          black: '#000000',
+        },
         light: {
           50: '#ffffff',
           100: '#f5f5f5',
@@ -29,8 +39,16 @@ export default {
           200: '#0a0a0a',
         }
       },
+      boxShadow: {
+        'brutalist': '4px 4px 0px 0px rgba(0,0,0,1)',
+        'brutalist-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+        'brutalist-xl': '12px 12px 0px 0px rgba(0,0,0,1)',
+        'brutalist-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+        'brutalist-dark': '4px 4px 0px 0px rgba(255,255,255,0.3)',
+      },
       fontFamily: {
         sans: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

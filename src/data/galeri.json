@@ -2,79 +2,79 @@
   {
     "id": 1,
     "judul": "Duo Orgil Anyar",
-    "fotoUrl": "assets/images/f0d0ba6-2af2-4297-ba43-38f577264c23.jpeg",
+    "fotoUrl": "https://i.ibb.co/r2b02RLh/f0d0ba6-2af2-4297-ba43-38f577264c23.jpg",
     "tanggal": "1945-08-17"
   },
   {
     "id": 2,
     "judul": "Maulid Nabi",
-    "fotoUrl": "/assets/images/maulid.jpeg",
+    "fotoUrl": "https://i.ibb.co/KphQpjnK/maulid.jpg",
     "tanggal": "2025-08-20"
   },
   {
     "id": 3,
     "judul": "Lomba 17 Agustus",
-    "fotoUrl": "/assets/images/lomba.jpg",
+    "fotoUrl": "https://i.ibb.co/pj2vW2b5/lomba.jpg",
     "tanggal": "2025-08-17"
   },
   {
     "id": 4,
     "judul": "Persahabatan",
-    "fotoUrl": "/assets/images/sahabat.jpg",
+    "fotoUrl": "https://i.ibb.co/5X4hZTgt/sahabat.jpg",
     "tanggal": "2025-08-20"
   },
   {
     "id": 5,
     "judul": "Upacara 17 Agustus",
-    "fotoUrl": "/assets/images/upacara.jpg",
+    "fotoUrl": "https://i.ibb.co/SwRCrS59/upacara.jpg",
     "tanggal": "2025-08-20"
   },
   {
     "id": 6,
     "judul": "Circle ",
-    "fotoUrl": "/assets/images/wedoan.jpeg",
+    "fotoUrl": "https://i.ibb.co/yFLfrM91/wedoan.jpg",
     "tanggal": "2025-10-16"
   },
      {
     "id": 7,
     "judul": "SOEMPAH PEMOEDA",
-    "fotoUrl": "/assets/images/sumpah.jpeg",
+    "fotoUrl": "https://i.ibb.co/DPcfGhRb/sumpah.jpg",
     "tanggal": "2025-10-28"
   },
    {
     "id": 8,
     "judul": "Pra Tka",
-    "fotoUrl": "/assets/images/tka.jpeg",
+    "fotoUrl": "https://i.ibb.co/YFVGWMBY/tka.jpg",
     "tanggal": "2025-10-31"
   },
   {
     "id": 9,
     "judul": "Foto Ijazah",
-    "fotoUrl": "/assets/images/fotoijazah.jpg",
+    "fotoUrl": "https://i.ibb.co/Nd6nVTSN/fotoijazah.jpg",
     "tanggal": "2025-10-28"
   },
   {
     "id": 10,
     "judul": "Tobat Masss",
-    "fotoUrl": "/assets/images/tobatmas.jpg",
+    "fotoUrl": "https://i.ibb.co/hJJCYdYK/tobatmas.jpg",
     "tanggal": "2025-10-28"
   },
   {
     "id": 11,
     "judul": "Teacher Dayy",
-    "fotoUrl": "/assets/images/Teacher.jpg",
+    "fotoUrl": "https://i.ibb.co/k2s3YGf6/Teacher.jpg",
     "tanggal": "2025-10-28"
   },
   {
     "id": 12,
     "judul": "Pra Teacher Day",
-    "fotoUrl": "/assets/images/pra.jpg",
+    "fotoUrl": "https://i.ibb.co/WW0XV840/pra.jpg",
     "tanggal": "2025-10-28"
   },
   {
     "id": 13,
     "judul": "Healing dulu bolo",
-    "fotoUrl": "/assets/images/healing.jpg",
+    "fotoUrl": "https://i.ibb.co/JWQk50LM/healing.jpg",
     "tanggal": "2025-10-28"
   }
 ]

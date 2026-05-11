@@ -9,16 +9,16 @@ export function AuthButtons() {
 
   if (!user) {
     return (
-      <div className="flex items-center space-x-4">
+      <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
         <a
           href="/login"
-          className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          className="px-4 py-2 border-2 border-black bg-brutalist-white text-black font-black uppercase text-xs shadow-brutalist hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
         >
           Login
         </a>
         <a
           href="/register"
-          className="px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="px-4 py-2 border-2 border-black bg-brutalist-blue text-black font-black uppercase text-xs shadow-brutalist hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
         >
           Register
         </a>
@@ -27,25 +27,25 @@ export function AuthButtons() {
   }
 
   return (
-    <div className="flex items-center space-x-4">
-      <div className="flex items-center space-x-2 text-sm text-gray-700 dark:text-gray-300">
+    <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
+      <div className="hidden md:flex items-center gap-2 bg-brutalist-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
         <User className="h-4 w-4" />
-        <span>{user.displayName || user.email}</span>
+        <span className="text-[10px] font-black uppercase">{user.displayName || user.email?.split('@')[0]}</span>
       </div>
       {isAdmin && (
         <a
           href="/admin"
-          className="px-3 py-2 text-sm font-medium bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+          className="px-4 py-2 border-2 border-black bg-brutalist-purple text-black font-black uppercase text-xs shadow-brutalist hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
         >
           Admin
         </a>
       )}
       <button
         onClick={logout}
-        className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 transition-colors"
+        className="px-4 py-2 border-2 border-black bg-brutalist-red text-black font-black uppercase text-xs shadow-brutalist hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all flex items-center gap-2"
       >
         <LogOut className="h-4 w-4" />
-        <span>Logout</span>
+        <span className="hidden sm:inline">Logout</span>
       </button>
     </div>
   );

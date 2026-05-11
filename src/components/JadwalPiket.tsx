@@ -3,46 +3,51 @@ import piketData from '../data/piket.json';
 
 export function JadwalPiket() {
   return (
-    <section id="piket" className="py-20 bg-gray-50 dark:bg-dark-50 transition-colors duration-500">
+    <section id="piket" className="py-24 transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="w-10 h-10 text-primary-600 dark:text-primary-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-700 dark:text-primary-300">
-              Jadwal Piket
+        <div className="flex flex-col items-center mb-16">
+          <div className="inline-flex items-center gap-4 bg-brutalist-yellow border-4 border-black px-8 py-3 shadow-brutalist rotate-1 mb-4">
+             <Sparkles className="w-10 h-10 text-black" />
+             <h2 className="text-4xl md:text-6xl font-black text-black uppercase tracking-tighter">
+              CLEAN SQUAD
             </h2>
           </div>
-          <p className="text-gray-600 dark:text-gray-400">5 Kelompok Piket Kelas</p>
+          <p className="text-xl font-bold text-black dark:text-gray-300 uppercase tracking-widest italic">Ready to make the class shine</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {piketData.map((kelompok, index) => (
             <div
               key={kelompok.hari}
-              className="bg-white dark:bg-dark-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
+              className="group relative"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-700 dark:to-primary-800 p-6 text-white">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                    <Sparkles className="w-6 h-6" />
+              <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 transition-transform group-hover:translate-x-3 group-hover:translate-y-3" />
+              <div className="relative bg-brutalist-white dark:bg-dark-100 border-4 border-black overflow-hidden h-full">
+                <div className={`${index % 2 === 0 ? 'bg-brutalist-pink' : 'bg-brutalist-blue'} border-b-4 border-black p-6`}>
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-2xl font-black text-black uppercase tracking-tighter">
+                      DAY: {kelompok.hari}
+                    </h3>
+                    <div className="w-10 h-10 bg-white border-2 border-black rotate-12 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-black" />
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold">Kelompok {kelompok.hari}</h3>
                 </div>
-              </div>
 
-              <div className="p-6">
-                <ul className="space-y-3">
-                  {kelompok.anggota.map((nama, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-3 text-gray-700 dark:text-gray-300"
-                    >
-                      <div className="w-2 h-2 bg-primary-500 dark:bg-primary-400 rounded-full"></div>
-                      <span>{nama}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="p-6 bg-white dark:bg-dark-100">
+                  <ul className="space-y-4">
+                    {kelompok.anggota.map((nama, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-3 text-black dark:text-white font-bold"
+                      >
+                        <div className="w-4 h-4 bg-brutalist-lime border-2 border-black" />
+                        <span className="uppercase text-sm tracking-tight">{nama}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}

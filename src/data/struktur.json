@@ -3,48 +3,48 @@
     "id": 1,
     "nama": "Nailla Rahma",
     "jabatan": "Ketua Kelas",
-    "fotoUrl": "/assets/images/naila1.jpeg"
+    "fotoUrl": "https://i.ibb.co/VpzL5T2F/naila1.jpg"
   },
   {
     "id": 2,
     "nama": "Zulfaa Kamiliyya",
     "jabatan": "Wakil Ketua",
-    "fotoUrl": "/assets/images/julpa.jpeg"
+    "fotoUrl": "https://i.ibb.co/mVc78KXz/julpa.jpg"
   },
   {
     "id": 3,
     "nama": "Ditan Aulia M",
     "jabatan": "Sekretaris 1",
-    "fotoUrl": "/assets/images/ditan.jpeg"
+    "fotoUrl": "https://i.ibb.co/67Sr97ZJ/ditan.jpg"
   },
   {
     "id": 4,
     "nama": "Retno W",
     "jabatan": "Bendahara 1",
-    "fotoUrl": "/assets/images/retnoo.jpeg"
+    "fotoUrl": "https://i.ibb.co/7xHhcDRj/retnoo.jpg"
   },
   {
     "id": 5,
     "nama": "Stevanny Cecilia",
     "jabatan": "Bendahara 2",
-    "fotoUrl": "/assets/images/vanny.jpeg"
+    "fotoUrl": "https://i.ibb.co/B5SgRpyr/vanny.jpg"
   },
   {
     "id": 6,
     "nama": "Aqeylla Balqis",
     "jabatan": "Sekretaris 2",
-    "fotoUrl": "/assets/images/aqella.jpeg"
+    "fotoUrl": "https://i.ibb.co/cmQzNvt/aqella.jpg"
   },
   {
     "id": 7,
     "nama": "Carlo Julio",
     "jabatan": "Koordinator Olahraga",
-    "fotoUrl": "/assets/images/carlo.jpeg"
+    "fotoUrl": "https://i.ibb.co/SXrsgzKP/calk.jpg"
   },
   {
     "id": 8,
     "nama": "Wildan Nur A",
     "jabatan": "Koordinator IT",
-    "fotoUrl": "/assets/images/wildan.png"
+    "fotoUrl": "https://i.ibb.co/hRcStBcB/wildan.jpg"
   }
 ]
