@@ -213,7 +213,7 @@ export function FloatingQuotes() {
               <div className="inline-flex items-center gap-3 bg-brutalist-lime border-4 border-black px-6 py-3 shadow-brutalist -rotate-1">
                 <Sparkles className="w-8 h-8 text-black animate-spin" style={{ animationDuration: '6s' }} />
                 <h2 className="text-2xl md:text-4xl font-black text-black uppercase tracking-tighter">
-                  KUTIPAN DATA DIRI
+                  Quotes
                 </h2>
               </div>
 
@@ -224,7 +224,7 @@ export function FloatingQuotes() {
                 title="Acak Kutipan"
               >
                 <RefreshCw className="w-5 h-5 font-black text-black" />
-                <span>ACAK KUTIPAN</span>
+                <span>ACAK QUOTE</span>
               </button>
             </div>
 
