@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Hero } from './components/Hero';
 import { WaliKelas } from './components/WaliKelas';
 import { StrukturKelas } from './components/StrukturKelas';
@@ -12,9 +12,34 @@ import { DarkModeToggle } from './components/DarkModeToggle';
 import { DhasaBot } from './components/DhasaBot';
 import { Toast } from './components/Toast';
 import { SplashScreen } from './components/SplashScreen';
+import siswaData from './data/siswa.json';
+import galeriData from './data/galeri.json';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
+
+  // Preload all image assets during the splash screen to avoid render delays on Android
+  useEffect(() => {
+    // 1. Preload splash screen image first
+    const splashImg = new Image();
+    splashImg.src = 'https://i.ibb.co/SYQFVVh/ali.jpg';
+
+    // 2. Preload student profile photos
+    siswaData.forEach((siswa) => {
+      if (siswa.fotoUrl) {
+        const img = new Image();
+        img.src = siswa.fotoUrl;
+      }
+    });
+
+    // 3. Preload gallery photos
+    galeriData.forEach((item) => {
+      if (item.fotoUrl) {
+        const img = new Image();
+        img.src = item.fotoUrl;
+      }
+    });
+  }, []);
 
   if (showSplash) {
     return <SplashScreen onComplete={() => setShowSplash(false)} />;
