@@ -1,83 +1,103 @@
 [
   {
     "id": 1,
-    "nama": "Nadin Aprilia",
+    "nama": "Nadin Apriliya",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/jPmJbdWK/nadin.jpg",
-    "instagram": "https://instagram.com/nadinpriliya",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/nadinnapriliya",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 20 April 2007",
+    "quote": "belittled, underestimated, belittled, talked about behind my back, I don't care, the point is my life is mine, not yours, slebew"
   },
   {
     "id": 2,
     "nama": "Nova Lita Ayu Kirani",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/zH2K0nnT/nov.jpg",
-    "instagram": "https://instagram.com/@vaa_nooo",
-    "tiktok": ""
+    "instagram": "https://instagram.com/vaa_nooo",
+    "tiktok": "",
+    "ttl": "Banyuwangi, 19 November 2007",
+    "quote": "Jadilah diri sendiri"
   },
   {
     "id": 3,
-    "nama": "DM Ramadhani Kurniawan",
+    "nama": "DM. Ramadhani Kurniawan",
     "jenisKelamin": "Laki-laki",
     "fotoUrl": "https://i.ibb.co/B8qtPzf/rama.jpg",
-    "instagram": "https://instagram.com/@ramdnkn__",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/ramdnkn__",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 23 September 2007",
+    "quote": "tutor due mother py?"
   },
   {
     "id": 4,
-    "nama": "Vrishabha Carlo Julio A",
+    "nama": "Vrishabha Carlo Julio Ardhiansyah",
     "jenisKelamin": "Laki-laki",
     "fotoUrl": "https://i.ibb.co/SXrsgzKP/calk.jpg",
-    "instagram": "https://instagram.com/@carlojulio02",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/carlojulio02",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Jember, 19 Mei 2007",
+    "quote": "Sederma namung anglampahi gesang, saking tinatahe gusti kang akaryo jagad, mugi tansah lilo legawa."
   },
   {
     "id": 5,
     "nama": "Khanza Fairus Heart",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/cXJcGX1j/heart.jpg",
-    "instagram": "https://www.instagram.com/faympire?igsh=MXF2YnU1M3NxdzIydg==",
-    "tiktok": "https://tiktok.com"
+    "instagram": "https://instagram.com/faympire",
+    "tiktok": "https://tiktok.com",
+    "ttl": "Banyuwangi, 27 Juli 2007",
+    "quote": "...And to Those I Love, Thanks for Sticking Around"
   },
   {
     "id": 6,
     "nama": "Miratus Rosidah",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/6cB86vSz/mirra.jpg",
-    "instagram": "https://instagram.com/@mra_rsdh",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/mra_rsdh",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 18 Oktober 2007",
+    "quote": "jangan dlu lelah, yakin semua indah, pejamkan lah mata padanya kita berserah"
   },
   {
     "id": 7,
-    "nama": "Nailla Rahma Erdamya P",
+    "nama": "Nailla Rahma",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/4w69xwTc/naila2.jpg",
-    "instagram": "https://instagram.com/@rahm4aerneii",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/rahm4aernei",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 31 Oktober 2007",
+    "quote": "aku adalah CEO perusahaan besar tapi, my god is bigger"
   },
   {
     "id": 8,
-    "nama": "Retno wahyu Tri Utami",
+    "nama": "Retno Wahyu Tri Utami",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/7xHhcDRj/retnoo.jpg",
-    "instagram": "https://instagram.com/@eretnoo",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/eretnoo",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 21 Februari 2007",
+    "quote": "hati yang gembira adalah obat"
   },
   {
     "id": 9,
-    "nama": "Amania Alfi Husni S",
+    "nama": "Amania Alfi Husni Salsabila",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/JjbkrvVP/amania.jpg",
-    "instagram": "https://instagram.com/@amania.salsabila",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/amniasbila_",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 15 Agustus 2007",
+    "quote": "Happiness is found in small, everyday moments."
   },
   {
     "id": 10,
     "nama": "Stevanny Cecilia Nur Balqis",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/B5SgRpyr/vanny.jpg",
-    "instagram": "https://instagram.com/@stpnnycclia",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/stpnnycclia",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 10 April 2007",
+    "quote": "life in every arc"
   },
   {
     "id": 11,
@@ -85,15 +105,19 @@
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/PGcq6HV9/davina.jpg",
     "instagram": "https://instagram.com/davinaajeng_",
-    "tiktok": "https://tiktok.com/"
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 03 juli 2007",
+    "quote": "Apa yang memang ditakdirkan untukmu akan selalu menemukan jalannya kembali padamu."
   },
   {
     "id": 12,
     "nama": "Shelviana Nur Cahyani",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/JRhPVyhh/selvi.jpg",
-    "instagram": "https://instagram.com/@sh3llpiianaaa",
-    "tiktok": "https://tiktok.com/@nihaochyie_"
+    "instagram": "https://instagram.com/031vinchy_",
+    "tiktok": "https://tiktok.com/@nihaochyie_",
+    "ttl": "Banyuwangi, 31 Juli 2007",
+    "quote": "We'll never be those kids again - lvy Frank Ocean"
   },
   {
     "id": 13,
@@ -101,71 +125,89 @@
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/QFgGSptj/beta.jpg",
     "instagram": "https://instagram.com/renatabetaa_",
-    "tiktok": "https://tiktok.com/@"
+    "tiktok": "https://tiktok.com/@",
+    "ttl": "Banyuwangi, 03 Juni 2007",
+    "quote": "don't worry, whats is yours will always find you"
   },
   {
     "id": 14,
     "nama": "Ditan Aulia Mentari",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/67Sr97ZJ/ditan.jpg",
-    "instagram": "https://instagram.com/nurulhidayah",
-    "tiktok": "https://tiktok.com/@nurulhidayah"
+    "instagram": "https://instagram.com/Zhean_xka",
+    "tiktok": "https://tiktok.com/@nurulhidayah",
+    "ttl": "Banyuwangi, 14 Juli 2007",
+    "quote": "Veni, Vidi, Vici"
   },
   {
     "id": 15,
     "nama": "Resti Dwi Novitasari",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/VWz5xgvf/resti.jpg",
-    "instagram": "https://instagram.com/@restydwi12_",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/restydwi12_",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 12 November 2007",
+    "quote": "Berusalah lebih keras lagi untuk menggapai masa depan sukses, saya sukses maka kalian juga harus sukses"
   },
   {
     "id": 16,
     "nama": "Naura Viana Sari",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/NgYz9nCV/gsdh.png",
-    "instagram": "https://instagram.com/@nauraviana2510",
-    "tiktok": "https://tiktok.com/@indahpermata"
+    "instagram": "https://instagram.com/nauraviana2510",
+    "tiktok": "https://tiktok.com/@indahpermata",
+    "ttl": "Banyuwangi, 25 Oktober 2007",
+    "quote": "lebih baik gagal setelah mencoba, daripada menyesal tidak pernah mencoba"
   },
   {
     "id": 17,
     "nama": "Zulfaa Kamiliyya",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/mVc78KXz/julpa.jpg",
-    "instagram": "https://instagram.com/@djoulepa",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/djoulepa",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 11 Desember 2007",
+    "quote": "Socialize romanticize the life"
   },
   {
     "id": 18,
     "nama": "Adis Melisya Kaelasari",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/WWYvMrbC/adis.jpg",
-    "instagram": "https://instagram.com/Adis_melisya",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/adis_melisya",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 10 Juni 2007",
+    "quote": "keinginan manusia tidak ada batasnya, tetapi hidup manusia ada batasnya"
   },
   {
     "id": 19,
     "nama": "Wildan Nur Awaludin",
     "jenisKelamin": "Laki-laki",
     "fotoUrl": "https://i.ibb.co/hRcStBcB/wildan.jpg",
-    "instagram": "https://instagram.com/wildanelgato",
-    "tiktok": "https://tiktok.com/@wildanelgato2"
+    "instagram": "https://instagram.com/wildanelgato2",
+    "tiktok": "https://tiktok.com/@wildanelgato2",
+    "ttl": "Banyuwangi, 5 Mei 2008",
+    "quote": "no coding no life"
   },
   {
     "id": 20,
     "nama": "Bilqis Lintang Delinda",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/RT4xKmLR/bilqis.jpg",
-    "instagram": "https://instagram.com/@blqsdlndaa",
-    "tiktok": "https://tiktok.com/@blqsdlndaa"
+    "instagram": "https://instagram.com/blqsdlndaa_",
+    "tiktok": "https://tiktok.com/@blqsdlndaa",
+    "ttl": "Banyuwangi, 19 januari 2008",
+    "quote": "dream as high as possible, then the impossible will be possible"
   },
   {
     "id": 21,
     "nama": "Hilda Mailinda",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/tpLjnyHW/hilda.jpg",
-    "instagram": "https://instagram.com/@hildamailinda",
-    "tiktok": "https://tiktok.com/@Mailin 🌷"
+    "instagram": "https://instagram.com/hildamailinda_",
+    "tiktok": "https://tiktok.com/@Mailin 🌷",
+    "ttl": "Banyuwangi, 11 Mei 2008",
+    "quote": "Dreams are real, if we believe and try."
   },
   {
     "id": 22,
@@ -173,7 +215,9 @@
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/PsfZ5kj8/elisa.jpg",
     "instagram": "https://instagram.com/lxczaa_",
-    "tiktok": "https://tiktok.com/@"
+    "tiktok": "https://tiktok.com/@",
+    "ttl": "Banyuwangi, 29 januari 2008",
+    "quote": "kita tidak akan menang jika kita tidak percaya bahwa kita bisa, jadi berani ambil resiko atau kehilangan kesempatan."
   },
   {
     "id": 23,
@@ -181,110 +225,138 @@
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/3mQdjp0W/dina.jpg",
     "instagram": "https://instagram.com/dinaamaulidaa",
-    "tiktok": "https://tiktok.com/"
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 19 Maret 2008",
+    "quote": "Never try, never know"
   },
   {
     "id": 24,
-    "nama": "Nama tidak di temukan",
+    "nama": "Aulia Ayuning Tiyas Palupi",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/HL3GyCf7/boneka.jpg",
     "instagram": "https://instagram.com/its.caull",
-    "tiktok": "https://tiktok.com/@orang_hilang3"
+    "tiktok": "https://tiktok.com/@orang_hilang3",
+    "ttl": "Banyuwangi, 07 April 2008",
+    "quote": "mengejar impian itu bukan seperti pesawat yang sekali terbang langsung sampai di tujuan"
   },
   {
     "id": 25,
-    "nama": "Jesisca Mareta A",
+    "nama": "Jesisca Mareta Anggraini",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/Rp1TfFf2/jeje.jpg",
-    "instagram": "https://www.instagram.com/js.scamrta?igsh=ZHozcGpxNWNhbHhi",
-    "tiktok": "https://tiktok.com/@"
+    "instagram": "https://instagram.com/js.scamrta",
+    "tiktok": "https://tiktok.com/@",
+    "ttl": "Banyuwangi, 17 Maret 2008",
+    "quote": "Perjalanan hidupku selalu indah ketika aku berkembang dengan keindahan seni ku\" Musiiikkk (Viva La Vida🎼)"
   },
   {
     "id": 26,
-    "nama": "Nessa Nasila Inka N",
+    "nama": "Nessa Nasila Inka Noverita",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/XxjbC4Tk/nessa.jpg",
     "instagram": "https://instagram.com/nsaa_nvrt",
-    "tiktok": "https://tiktok.com/"
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 24 April 2008",
+    "quote": "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart."
   },
   {
     "id": 27,
-    "nama": "Inggrit Rahayu S",
+    "nama": "Inggrit Rahayu Setianingsih",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/j9M4H9Mn/inggrit.jpg",
-    "instagram": "https://instagram.com/_ingg.ra",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/_ing.riy",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 06 Maret 2008",
+    "quote": "I walked through storms and still found my sunshine."
   },
   {
     "id": 28,
-    "nama": "Cheryl Kartika S",
+    "nama": "Cheryl Kartika Sari",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/PG7yJzm3/cher.jpg",
     "instagram": "https://instagram.com/cheryl_ks.22",
-    "tiktok": "https://tiktok.com/"
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 22 Januari 2008",
+    "quote": "Hari ini aku berjuang, esok namaku dikenang"
   },
   {
     "id": 29,
-    "nama": "Viona Lhia A",
+    "nama": "Viona Lhia Amanda",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/b5RQ2Wmx/viona.jpg",
-    "instagram": "https://instagram.com/@_vvienda",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/_vvienda",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 24 Maret 2008",
+    "quote": "i put the 'pro' in procrastinate"
   },
   {
     "id": 30,
     "nama": "Alfian Widyatama",
     "jenisKelamin": "Laki-laki",
     "fotoUrl": "https://i.ibb.co/6cpdNY7q/alfian.jpg",
-    "instagram": "https://instagram.com/@alfian_widyatamaa",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/alwdytm._",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Bekasi, 21 April 2008",
+    "quote": "dudu gunung yen ora ono tanjakane, dudu laut yen ora ono ombake, dudu urip jenenge yen ora ono pacobane"
   },
   {
     "id": 31,
-    "nama": "I Luh Rara Bunga U",
+    "nama": "I Luh Rara Bunga Untani",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/RG0vShZb/iluh.jpg",
-    "instagram": "https://instagram.com/@bbingrraa_",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/mrtbpraraa",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 14 Maret 2008",
+    "quote": "and it's fine to fake it till u make it, till u do, till it's true"
   },
   {
     "id": 32,
-    "nama": "Aqeylla Balqis A S",
+    "nama": "Aqeylla Balqis Ahla Styanira",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/cmQzNvt/aqella.jpg",
-    "instagram": "https://instagram.com/@kikkill.laa",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/kikkill.laa",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 05 Januari 2008",
+    "quote": "keep moving forward"
   },
   {
     "id": 33,
-    "nama": "Putri Nur Laili F",
+    "nama": "Putri Nur Laili Febriani",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/fzytQ9zp/putri.jpg",
     "instagram": "https://instagram.com/_putriinna",
-    "tiktok": "https://tiktok.com/"
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 11 Februari 2008",
+    "quote": "Kita berpisah bukan karena kehilangan, tapi karena punya tujuan masing-masing."
   },
   {
     "id": 34,
-    "nama": "Zhafira Rivanka",
+    "nama": "Zhafira Rivanka Bravorizky",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/yBWM6FJX/zapira.jpg",
-    "instagram": "https://www.instagram.com/zhfrvnkaa_?igsh=bDNuemJmdTd4aXpy",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/zhfrvnkaa_",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Singkawang, 26 April 2008",
+    "quote": "good things take time"
   },
   {
     "id": 35,
     "nama": "Nilsa Sandra Wijaya",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/wFChW1Wc/nama.jpg",
-    "instagram": "https://instagram.com/@ciatw0",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/syv.sasa",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 17 januari 2008",
+    "quote": "Belajarlah dari hari kemarin, hiduplah untuk hari ini, berharaplah untuk besok."
   },
   {
     "id": 36,
     "nama": "Nur Mala Maylynda",
     "jenisKelamin": "Perempuan",
     "fotoUrl": "https://i.ibb.co/KcV5rKmg/mala.jpg",
-    "instagram": "https://instagram.com/mly.mellynd_",
-    "tiktok": "https://tiktok.com/"
+    "instagram": "https://instagram.com/mmellynd_",
+    "tiktok": "https://tiktok.com/",
+    "ttl": "Banyuwangi, 12 Mei 2008",
+    "quote": "Perbuatan baik yang kamu lakukan sekarang, adalah tabungan baik untuk dirimu dimasa depan"
   }
 ]

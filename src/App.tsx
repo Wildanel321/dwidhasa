@@ -5,6 +5,7 @@ import { DaftarSiswa } from './components/DaftarSiswa';
 import { JadwalPelajaran } from './components/JadwalPelajaran';
 import { JadwalPiket } from './components/JadwalPiket';
 import { Galeri } from './components/Galeri';
+import { FloatingQuotes } from './components/FloatingQuotes';
 import { Footer } from './components/Footer';
 import { DarkModeToggle } from './components/DarkModeToggle';
 import { DhasaBot } from './components/DhasaBot';
@@ -24,6 +25,7 @@ function App() {
       <JadwalPelajaran />
       <JadwalPiket />
       <Galeri />
+      <FloatingQuotes />
       <Footer />
     </div>
   );
