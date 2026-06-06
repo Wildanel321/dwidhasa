@@ -1,6 +1,6 @@
-# ⚡ Dwi Dhasa - Website Resmi XII.2
+# ⚡ DwiDhasa - Website Resmi XII.2
 
-Selamat datang di repositori **Dwi Dhasa (XII.2)**. Ini adalah platform web modern kelas XII.2 yang dirancang secara profesional dengan estetika **Neobrutalisme** yang berani, dinamis, dan premium. Website ini dilengkapi dengan arsitektur multi-halaman, asisten cerdas berbasis AI (LLaMA 70B), serta berbagai fitur interaktif kelas.
+Selamat datang di repositori **DwiDhasa (XII.2)**. Ini adalah platform web modern kelas XII.2 yang dirancang secara profesional dengan estetika **Neobrutalisme** yang berani, dinamis, dan premium. Website ini dilengkapi dengan arsitektur multi-halaman, asisten cerdas berbasis AI (LLaMA 70B), serta berbagai fitur interaktif kelas.
 
 ---
 
