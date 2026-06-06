@@ -92,5 +92,4 @@ Buka `http://localhost:5173` di browser Anda untuk melihat hasilnya.
 ---
 
 ## 📝 Hak Cipta
-Dibuat oleh **Tim IT DwiDhasa (XII.2)**. Project ini bersifat tertutup (Private Repository) dan dilindungi hak cipta. Dilarang menyalin atau mendistribusikan kode tanpa izin yang sah.
-**Solo Dev**
+Dibuat oleh **Tim Dwi Dhasa (XII.2)**. Project ini bersifat tertutup (Private Repository) dan dilindungi hak cipta. Dilarang menyalin atau mendistribusikan kode tanpa izin yang sah.
