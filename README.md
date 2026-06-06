@@ -54,19 +54,6 @@ Website ini mengusung tema **Neobrutalism UI** dengan karakteristik:
 
 ---
 
-## 📁 Struktur Proyek (Ringkasan)
-```bash
-dwidhasa/
-├── src/
-│   ├── pages/            # Halaman utama (Home, Permainan, Penghargaan, Chat)
-│   ├── components/       # Komponen UI spesifik
-│   ├── contexts/         # Manajemen State Global (Theme, Auth)
-│   ├── data/             # Database statis berbentuk JSON
-│   ├── App.tsx           # Router Config
-│   └── main.tsx          # React Entry Point
-└── .env                  # Environment Variables
-```
-
 ---
 
 ## 💻 Cara Menjalankan Project Secara Lokal
