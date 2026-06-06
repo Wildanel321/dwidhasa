@@ -1,6 +1,6 @@
-# ⚡ Dwi Dhasa - Website Resmi XII.2
+# ⚡ DwiDhasa - Website Resmi XII.2
 
-Selamat datang di repositori **Dwi Dhasa (XII.2)**. Ini adalah platform web modern kelas XII.2 yang dirancang secara profesional dengan estetika **Neobrutalisme** yang berani, dinamis, dan premium. Website ini dilengkapi dengan arsitektur multi-halaman, asisten cerdas berbasis AI (LLaMA 70B), serta berbagai fitur interaktif kelas.
+Selamat datang di repositori **DwiDhasa (XII.2)**. Ini adalah platform web modern kelas XII.2 yang dirancang secara profesional dengan estetika **Neobrutalisme** yang berani, dinamis, dan premium. Website ini dilengkapi dengan arsitektur multi-halaman, asisten cerdas berbasis AI (LLaMA 70B), serta berbagai fitur interaktif kelas.
 
 ---
 
@@ -54,45 +54,10 @@ Website ini mengusung tema **Neobrutalism UI** dengan karakteristik:
 
 ---
 
-## 📁 Struktur Proyek (Ringkasan)
-```bash
-dwidhasa/
-├── src/
-│   ├── pages/            # Halaman utama (Home, Permainan, Penghargaan, Chat)
-│   ├── components/       # Komponen UI spesifik
-│   ├── contexts/         # Manajemen State Global (Theme, Auth)
-│   ├── data/             # Database statis berbentuk JSON
-│   ├── App.tsx           # Router Config
-│   └── main.tsx          # React Entry Point
-└── .env                  # Environment Variables
-```
-
----
-
-## 💻 Cara Menjalankan Project Secara Lokal
-
-### Prasyarat
-Pastikan Anda sudah menginstal **Node.js** di komputer Anda.
-
-### 1. Instal Dependensi
-Buka terminal di dalam folder project ini, lalu jalankan:
-```bash
-npm install
-```
-
-### 2. Konfigurasi Environment Variables
-Pastikan file `.env` sudah diisi dengan kredensial API (Supabase & Groq).
-
-### 3. Jalankan Mode Development
-```bash
-npm run dev
-```
-Buka `http://localhost:5173` di browser Anda untuk melihat hasilnya.
-
 ---
 
 ## 📝 Hak Cipta & Lisensi
-Dibuat oleh **Tim Dwi Dhasa (XII.2)**. 
+Dibuat oleh **Tim IT DwiDhasa (XII.2)**. 
 
 Project ini bersifat tertutup (Private Repository) dan dilindungi oleh Hak Cipta Internasional di bawah lisensi *All Rights Reserved*. Segala bentuk penyalinan, modifikasi, atau distribusi ulang dari kode sumber ini tanpa izin tertulis yang sah adalah dilarang keras secara hukum. 
 
