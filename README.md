@@ -1,6 +1,6 @@
 # ⚡ Dwi Dhasa - Website Resmi XII.2
 
-Selamat datang di repositori **Dwi Dhasa (XII.2)**! Ini adalah platform web modern kelas XII.2 yang dirancang dengan estetika **Neobrutalisme** yang berani, dinamis, dan premium. Dilengkapi dengan asisten pintar DhasaBot, integrasi autentikasi, serta animasi atmosferik interaktif.
+Selamat datang di repositori **Dwi Dhasa (XII.2)**. Ini adalah platform web modern kelas XII.2 yang dirancang secara profesional dengan estetika **Neobrutalisme** yang berani, dinamis, dan premium. Website ini dilengkapi dengan arsitektur multi-halaman, asisten cerdas berbasis AI (LLaMA 70B), serta berbagai fitur interaktif kelas.
 
 ---
 
@@ -8,69 +8,63 @@ Selamat datang di repositori **Dwi Dhasa (XII.2)**! Ini adalah platform web mode
 Website ini mengusung tema **Neobrutalism UI** dengan karakteristik:
 - Batas garis hitam tebal (`border-4` & `border-8`) yang tegas.
 - Bayangan datar kontras tinggi (`shadow-brutalist`).
-- Palet warna pastel yang cerah dan hidup (`brutalist-lime`, `brutalist-yellow`, `brutalist-pink`, `brutalist-blue`, `brutalist-purple`).
-- Tipografi huruf besar tebal (*bold uppercase*) untuk kesan yang kuat dan modern.
+- Palet warna yang cerah dan hidup dipadukan dengan tipografi *bold uppercase* untuk kesan yang kuat dan modern.
 - Transisi interaktif yang responsif dan micro-animations di setiap elemen.
+- Mendukung fitur **Dark Mode** secara dinamis.
 
 ---
 
 ## 🚀 Fitur Utama
 
-### 🧑‍🎓 1. Direktori & Detail Bio Siswa
-- Menampilkan seluruh siswa-siswi kelas XII.2 dengan kartu berbayang brutalist.
-- Hover interaktif yang mengubah foto dari hitam-putih (*grayscale*) menjadi berwarna penuh.
-- Indikator interaktif **"LIHAT DETAIL →"** yang berkedip lembut saat diarahkan.
-- **Modal Profil Premium**: Menampilkan biodata lengkap termasuk Tempat Tanggal Lahir (TTL), kutipan hidup (*quote*), foto berwarna penuh, dan tombol media sosial (Instagram & TikTok) berdesain neobrutalis.
+### 🤖 1. DhasaBot AI (Chat Assistant LLaMA 70B)
+- Asisten virtual cerdas bertenaga **LLaMA 70B** via Groq API.
+- Halaman obrolan (*chat*) mandiri bergaya profesional dengan UI/UX yang responsif.
+- Memiliki *personality* khusus sebagai asisten kelas XII.2 untuk menjawab berbagai pertanyaan dan berinteraksi dengan siswa.
 
-### ☁️ 2. Seksi Kutipan Atmosferik (Cloudy Quotes)
-- Seksi khusus dengan gradien langit yang dinamis dan beranimasi.
-- **Efek Partikel Atmosfer**: Partikel halus bercahaya yang melayang perlahan ke atas.
-- **Efek Awan Berjatuhan**: Awan putih dekoratif yang meluncur turun dari atas layar dengan ukuran dan kecepatan acak.
-- **Kartu Melayang (Floating Cards)**: Kartu kutipan siswa yang melayang naik-turun dengan rotasi sudut acak.
-- **Tombol Pengacak (Shuffle)**: Memuat kombinasi 8 kutipan baru secara acak secara instan dengan transisi halus.
+### 🧑‍🎓 2. Direktori & Detail Bio Siswa
+- Menampilkan profil seluruh siswa-siswi kelas XII.2.
+- **Modal Profil Premium**: Menampilkan biodata lengkap termasuk Tempat Tanggal Lahir (TTL), kutipan hidup (*quote*), dan koneksi media sosial (Instagram & TikTok).
 
-### 🤖 3. DhasaBot (AI Chat Assistant)
-- Bot asisten cerdas khusus kelas XII.2 yang siap membantu menjawab pertanyaan seputar jadwal piket, jadwal pelajaran, guru, hingga data siswa.
+### 🎮 3. Zona Permainan & Penghargaan (Interactive Pages)
+- **Halaman Permainan (`/permainan`)**: Menyajikan fitur hiburan kelas seperti "Siapa Aku?" (Kuis tebak siswa), Pengacak Siswa (Random Picker), dan "Most Likely To" dengan sistem *voting* Realtime (Supabase).
+- **Halaman Penghargaan (`/penghargaan`)**: Menampilkan daftar "Class Awards" yang dimenangkan oleh siswa-siswi kelas XII.2.
 
-### 📅 4. Informasi Akademik Lengkap
-- **Wali Kelas**: Profil guru penanggung jawab kelas.
-- **Struktur Organisasi**: Bagan kepengurusan kelas XII.2 yang terstruktur secara brutalist.
-- **Jadwal Pelajaran**: Tampilan jadwal mata pelajaran mingguan.
-- **Jadwal Piket**: Daftar pembagian regu piket kebersihan kelas.
-- **Galeri Kelas**: Kumpulan dokumentasi foto kebersamaan kelas XII.2.
+### ☁️ 4. Seksi Kutipan Atmosferik (Cloudy Quotes)
+- Seksi khusus dengan efek partikel atmosfer dan awan berjatuhan.
+- Menampilkan kartu kutipan siswa yang melayang secara acak dengan fitur *shuffle* interaktif.
 
-### 🔒 5. Sistem Autentikasi
-- Halaman Login dan Register terintegrasi Firebase Auth (Mendukung Login Email/Sandi, Google, dan GitHub OAuth).
+### 📅 5. Informasi Akademik Terintegrasi
+- **Struktur Organisasi & Wali Kelas**: Menampilkan bagan kepengurusan kelas secara interaktif.
+- **Jadwal Pelajaran & Piket**: Menampilkan data jadwal mingguan yang mudah diakses.
+- **Status Bar Real-time**: Indikator presensi bawah yang menampilkan jam real-time, tanggal, dan simulasi pengunjung aktif.
+
+### 🔒 6. Sistem Autentikasi & Database
+- Terintegrasi dengan **Firebase Auth** (Login Email/Google/GitHub) dan **Supabase** (Database Relasional & Realtime Voting).
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework Utama**: [React](https://react.dev/) + [Vite](https://vitejs.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (menggunakan palet warna kustom & shadow brutalist)
+- **Frontend**: [React](https://react.dev/) + [Vite](https://vitejs.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Routing**: [React Router DOM v7](https://reactrouter.com/) (Multi-page Architecture)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (dengan palet warna neobrutalist)
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Backend / Auth**: [Firebase](https://firebase.google.com/) & [Supabase](https://supabase.com/)
-- **Routing**: [React Router DOM v7](https://reactrouter.com/)
+- **Backend / Database**: [Supabase](https://supabase.com/) & [Firebase](https://firebase.google.com/)
+- **AI Integration**: [Groq API](https://groq.com/) (LLaMA-3-70b-8192)
 
 ---
 
-## 📁 Struktur Proyek
-
+## 📁 Struktur Proyek (Ringkasan)
 ```bash
 dwidhasa/
 ├── src/
-│   ├── components/       # Komponen UI utama (Hero, DaftarSiswa, FloatingQuotes, dll.)
-│   ├── contexts/         # Manajemen State Global (AuthContext)
-│   ├── data/             # Database lokal berbentuk JSON (siswa, jadwal, galeri)
-│   │   ├── siswa.json    # Database utama profil 36 siswa
-│   │   ├── jadwal.json   # Data jadwal pelajaran
-│   │   └── piket.json    # Data pembagian piket harian
-│   ├── firebase.ts       # Konfigurasi koneksi Firebase SDK
-│   ├── App.tsx           # Entry point tata letak komponen halaman utama
-│   ├── main.tsx          # Render React DOM dan Router wrapper
-│   └── index.css         # Styling global & pola dot grid brutalist
-├── tailwind.config.js    # Konfigurasi token warna brutalist & animasi kustom
-└── vite.config.ts        # Bundler configuration
+│   ├── pages/            # Halaman utama (Home, Permainan, Penghargaan, Chat)
+│   ├── components/       # Komponen UI spesifik
+│   ├── contexts/         # Manajemen State Global (Theme, Auth)
+│   ├── data/             # Database statis berbentuk JSON
+│   ├── App.tsx           # Router Config
+│   └── main.tsx          # React Entry Point
+└── .env                  # Environment Variables
 ```
 
 ---
@@ -80,30 +74,22 @@ dwidhasa/
 ### Prasyarat
 Pastikan Anda sudah menginstal **Node.js** di komputer Anda.
 
-### 1. Clone & Masuk ke Folder Project
-```bash
-git clone <repository-url>
-cd dwidhasa
-```
-
-### 2. Instal Dependensi
+### 1. Instal Dependensi
+Buka terminal di dalam folder project ini, lalu jalankan:
 ```bash
 npm install
 ```
+
+### 2. Konfigurasi Environment Variables
+Pastikan file `.env` sudah diisi dengan kredensial API (Supabase & Groq).
 
 ### 3. Jalankan Mode Development
 ```bash
 npm run dev
 ```
-Buka [http://localhost:5173](http://localhost:5173) di browser Anda untuk melihat hasilnya.
-
-### 4. Build untuk Production
-```bash
-npm run build
-```
-Hasil build akan berada di folder `/dist` siap dideploy ke Firebase Hosting, Vercel, atau Netlify.
+Buka `http://localhost:5173` di browser Anda untuk melihat hasilnya.
 
 ---
 
-## 📝 Kontributor
-Dibuat dengan 💻 dan ☕ oleh tim **XII.2**. Seluruh hak cipta dilindungi.
+## 📝 Hak Cipta
+Dibuat oleh **Tim Dwi Dhasa (XII.2)**. Project ini bersifat tertutup (Private Repository) dan dilindungi hak cipta. Dilarang menyalin atau mendistribusikan kode tanpa izin yang sah.
