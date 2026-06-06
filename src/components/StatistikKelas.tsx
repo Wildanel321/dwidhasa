@@ -530,77 +530,78 @@ export function StatistikKelas() {
             </div>
           </div>
 
-          {/* Fun Facts: oldest/youngest */}
+          {/* Podium Umur */}
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-              gap: '1rem',
+              border: '4px solid #000',
+              boxShadow: '6px 6px 0px #000',
+              padding: '2rem',
+              background: '#fff',
+              marginTop: '3rem',
             }}
+            className="dark:bg-dark-50"
           >
-            <div
+            <h3
               style={{
-                border: '4px solid #000',
-                boxShadow: '6px 6px 0px #000',
-                padding: '1.5rem',
-                background: '#FFEAA7',
+                fontWeight: 900,
+                fontSize: '1.1rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                marginBottom: '2rem',
+                borderBottom: '3px solid #000',
+                paddingBottom: '0.5rem',
                 textAlign: 'center',
               }}
+              className="dark:text-white"
             >
-              <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>👴</div>
-              <div style={{ fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.25rem' }}>
-                PALING TUA
-              </div>
-              <div style={{ fontWeight: 900, fontSize: '1.1rem', color: '#000' }}>
-                {tertua?.nama ?? '-'}
-              </div>
-              <div style={{ fontSize: '0.8rem', color: '#333', marginTop: '0.25rem' }}>
-                {tertua?.ttl ?? ''}
-              </div>
-            </div>
+              🏆 Podium Umur
+            </h3>
+            
+            <div className="flex flex-col md:flex-row justify-center items-end gap-4 md:gap-8 mt-8">
+              
+              {/* Podium 2: Tengah */}
+              {sortedByDate.length >= 2 && (
+                <div className="flex flex-col items-center order-2 md:order-1 flex-1">
+                  <div className="bg-brutalist-blue border-4 border-black p-3 mb-2 text-center w-full shadow-[4px_4px_0px_#000]">
+                    <div className="font-black text-sm uppercase">Paling Tengah</div>
+                    <div className="font-black text-lg">{siswa.find(s => parseTTL(s.ttl)?.day === sortedByDate[Math.floor(sortedByDate.length/2)].day && parseTTL(s.ttl)?.month === sortedByDate[Math.floor(sortedByDate.length/2)].month)?.nama.split(' ')[0] ?? '-'}</div>
+                    <div className="text-xs font-bold mt-1">{sortedByDate[Math.floor(sortedByDate.length/2)].day}/{sortedByDate[Math.floor(sortedByDate.length/2)].month}/{sortedByDate[Math.floor(sortedByDate.length/2)].year}</div>
+                  </div>
+                  <div className="w-full bg-[#C0C0C0] border-4 border-black border-b-0 h-24 flex items-start justify-center pt-2">
+                    <span className="font-black text-3xl">#2</span>
+                  </div>
+                </div>
+              )}
 
-            <div
-              style={{
-                border: '4px solid #000',
-                boxShadow: '6px 6px 0px #000',
-                padding: '1.5rem',
-                background: '#96CEB4',
-                textAlign: 'center',
-              }}
-            >
-              <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>🐣</div>
-              <div style={{ fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.25rem' }}>
-                PALING MUDA
-              </div>
-              <div style={{ fontWeight: 900, fontSize: '1.1rem', color: '#000' }}>
-                {termuda?.nama ?? '-'}
-              </div>
-              <div style={{ fontSize: '0.8rem', color: '#333', marginTop: '0.25rem' }}>
-                {termuda?.ttl ?? ''}
-              </div>
-            </div>
+              {/* Podium 1: Tertua */}
+              {tertua && (
+                <div className="flex flex-col items-center order-1 md:order-2 flex-1 relative -top-4">
+                  <div className="absolute -top-10 text-4xl animate-bounce">👑</div>
+                  <div className="bg-brutalist-yellow border-4 border-black p-4 mb-2 text-center w-full shadow-[6px_6px_0px_#000] z-10">
+                    <div className="font-black text-sm uppercase">Paling Tua</div>
+                    <div className="font-black text-xl">{tertua.nama.split(' ')[0]}</div>
+                    <div className="text-xs font-bold mt-1">{tertua.ttl.split(',')[1].trim()}</div>
+                  </div>
+                  <div className="w-full bg-[#FFD700] border-4 border-black border-b-0 h-32 flex items-start justify-center pt-2">
+                    <span className="font-black text-4xl">#1</span>
+                  </div>
+                </div>
+              )}
 
-            <div
-              style={{
-                border: '4px solid #000',
-                boxShadow: '6px 6px 0px #000',
-                padding: '1.5rem',
-                background: '#DDA0DD',
-                textAlign: 'center',
-              }}
-            >
-              <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>📍</div>
-              <div style={{ fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
-                ASAL KOTA
-              </div>
-              <div style={{ fontWeight: 900, fontSize: '1.5rem', color: '#000' }}>
-                {dariBanyuwangi}
-              </div>
-              <div style={{ fontSize: '0.8rem', color: '#333' }}>dari Banyuwangi</div>
-              <div style={{ fontWeight: 900, fontSize: '1.2rem', color: '#000', marginTop: '0.25rem' }}>
-                {luarKota}
-              </div>
-              <div style={{ fontSize: '0.8rem', color: '#333' }}>dari luar kota</div>
+              {/* Podium 3: Termuda */}
+              {termuda && (
+                <div className="flex flex-col items-center order-3 flex-1">
+                  <div className="bg-brutalist-pink border-4 border-black p-3 mb-2 text-center w-full shadow-[4px_4px_0px_#000]">
+                    <div className="font-black text-sm uppercase">Paling Muda</div>
+                    <div className="font-black text-lg">{termuda.nama.split(' ')[0]}</div>
+                    <div className="text-xs font-bold mt-1">{termuda.ttl.split(',')[1].trim()}</div>
+                  </div>
+                  <div className="w-full bg-[#CD7F32] border-4 border-black border-b-0 h-16 flex items-start justify-center pt-2">
+                    <span className="font-black text-2xl">#3</span>
+                  </div>
+                </div>
+              )}
+
             </div>
           </div>
 
