@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Instagram, Music } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import classData from '../data/classData.json';
 
 export function Hero() {
   const [displayText, setDisplayText] = useState('');
   const fullText = 'Dwi Dhasa';
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (index < fullText.length) {
@@ -21,6 +23,14 @@ export function Hero() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleAction = (action: string, isRoute: boolean = false) => {
+    if (isRoute) {
+      navigate(action);
+    } else {
+      scrollToSection(action);
     }
   };
 
@@ -69,16 +79,18 @@ export function Hero() {
 
         <div className="flex flex-wrap gap-4 justify-center">
           {[
-            { label: 'Tentang', id: 'wali-kelas', color: 'bg-brutalist-yellow' },
-            { label: 'Struktur', id: 'struktur', color: 'bg-brutalist-blue' },
-            { label: 'Siswa', id: 'siswa', color: 'bg-brutalist-lime' },
-            { label: 'Jadwal', id: 'jadwal', color: 'bg-brutalist-purple' },
-            { label: 'Piket', id: 'piket', color: 'bg-brutalist-red' },
-            { label: 'Galeri', id: 'galeri', color: 'bg-brutalist-pink' },
+            { label: 'Tentang', id: 'wali-kelas', color: 'bg-brutalist-yellow', isRoute: false },
+            { label: 'Struktur', id: 'struktur', color: 'bg-brutalist-blue', isRoute: false },
+            { label: 'Siswa', id: 'siswa', color: 'bg-brutalist-lime', isRoute: false },
+            { label: 'Jadwal', id: 'jadwal', color: 'bg-brutalist-purple', isRoute: false },
+            { label: 'Piket', id: 'piket', color: 'bg-brutalist-red', isRoute: false },
+            { label: 'Galeri', id: 'galeri', color: 'bg-brutalist-pink', isRoute: false },
+            { label: 'Permainan', id: '/permainan', color: 'bg-brutalist-blue', isRoute: true },
+            { label: 'Penghargaan', id: '/penghargaan', color: 'bg-brutalist-yellow', isRoute: true },
           ].map((item) => (
             <button
               key={item.id}
-              onClick={() => scrollToSection(item.id)}
+              onClick={() => handleAction(item.id, item.isRoute)}
               className={`px-4 py-2 border-2 border-black font-bold uppercase text-xs md:text-sm ${item.color} shadow-brutalist hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-black`}
             >
               {item.label}
