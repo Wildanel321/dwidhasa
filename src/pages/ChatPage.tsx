@@ -101,7 +101,7 @@ export function ChatPage() {
       {/* Header */}
       <header className="bg-white dark:bg-dark-200 shadow-sm border-b dark:border-dark-50 p-4 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-4">
-          <Link to="/" className="p-2 hover:bg-gray-100 dark:hover:bg-dark-50 rounded-full transition-colors">
+          <Link to="/kelas" className="p-2 hover:bg-gray-100 dark:hover:bg-dark-50 rounded-full transition-colors">
             <ArrowLeft className="w-6 h-6 text-gray-700 dark:text-gray-300" />
           </Link>
           <div className="flex items-center gap-3">

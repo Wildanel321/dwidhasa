@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { DarkModeToggle } from './components/DarkModeToggle';
 import { DhasaBot } from './components/DhasaBot';
 import { Toast } from './components/Toast';
@@ -58,7 +58,8 @@ function App() {
       <DhasaBot />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Navigate to="/kelas" replace />} />
+        <Route path="/kelas" element={<HomePage />} />
         <Route path="/permainan" element={<PermainanPage />} />
         <Route path="/penghargaan" element={<PenghargaanPage />} />
         <Route path="/quotes" element={<QuotesPage />} />
