@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "kategori": "Most Likely to Be Famous",
+    "emoji": "⭐",
+    "desc": "Siapa yang paling mungkin jadi artis/terkenal?",
+    "color": "#FFD700"
+  },
+  {
+    "id": 2,
+    "kategori": "Most Likely to Marry First",
+    "emoji": "💍",
+    "desc": "Siapa yang paling mungkin nikah duluan?",
+    "color": "#FF69B4"
+  },
+  {
+    "id": 3,
+    "kategori": "Most Likely to Travel the World",
+    "emoji": "✈️",
+    "desc": "Siapa yang paling mungkin keliling dunia?",
+    "color": "#00BFFF"
+  },
+  {
+    "id": 4,
+    "kategori": "Most Likely to Be a Millionaire",
+    "emoji": "💰",
+    "desc": "Siapa yang paling mungkin jadi miliarder?",
+    "color": "#32CD32"
+  },
+  {
+    "id": 5,
+    "kategori": "Most Likely to Write a Book",
+    "emoji": "📚",
+    "desc": "Siapa yang paling mungkin nulis buku?",
+    "color": "#FF8C00"
+  },
+  {
+    "id": 6,
+    "kategori": "Most Likely to Go Viral",
+    "emoji": "🔥",
+    "desc": "Siapa yang paling mungkin viral di sosmed?",
+    "color": "#FF4500"
+  },
+  {
+    "id": 7,
+    "kategori": "Most Likely to Be President",
+    "emoji": "🏛️",
+    "desc": "Siapa yang paling mungkin jadi presiden?",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 8,
+    "kategori": "Most Likely to Discover Something",
+    "emoji": "🔬",
+    "desc": "Siapa yang paling mungkin temuin sesuatu yang baru?",
+    "color": "#20B2AA"
+  },
+  {
+    "id": 9,
+    "kategori": "Most Likely to Win an Oscar",
+    "emoji": "🏆",
+    "desc": "Siapa yang paling mungkin menang penghargaan bergengsi?",
+    "color": "#DAA520"
+  },
+  {
+    "id": 10,
+    "kategori": "Most Likely to Live Abroad",
+    "emoji": "🌍",
+    "desc": "Siapa yang paling mungkin tinggal di luar negeri?",
+    "color": "#4169E1"
+  }
+]

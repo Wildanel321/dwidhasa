@@ -12,6 +12,13 @@ import { DarkModeToggle } from './components/DarkModeToggle';
 import { DhasaBot } from './components/DhasaBot';
 import { Toast } from './components/Toast';
 import { SplashScreen } from './components/SplashScreen';
+import { CountdownKelulusan } from './components/CountdownKelulusan';
+import { StatistikKelas } from './components/StatistikKelas';
+import { ClassAwards } from './components/ClassAwards';
+import { BukuKenangan } from './components/BukuKenangan';
+import { SiapaAkuQuiz } from './components/SiapaAkuQuiz';
+import { RandomSiswa } from './components/RandomSiswa';
+import { MostLikelyTo } from './components/MostLikelyTo';
 import siswaData from './data/siswa.json';
 import galeriData from './data/galeri.json';
 
@@ -51,14 +58,31 @@ function App() {
       <DarkModeToggle />
       <DhasaBot />
 
+      {/* ── Core Sections ── */}
       <Hero />
       <WaliKelas />
       <StrukturKelas />
       <DaftarSiswa />
+
+      {/* ── Celebration ── */}
+      <CountdownKelulusan />
+
+      {/* ── Data & Fun ── */}
+      <StatistikKelas />
       <JadwalPelajaran />
       <JadwalPiket />
       <Galeri />
+
+      {/* ── Interactive ── */}
       <FloatingQuotes />
+      <RandomSiswa />
+      <SiapaAkuQuiz />
+      <MostLikelyTo />
+      <ClassAwards />
+
+      {/* ── Social ── */}
+      <BukuKenangan />
+
       <Footer />
     </div>
   );
