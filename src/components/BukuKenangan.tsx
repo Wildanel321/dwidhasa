@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { supabase, KenaganRow } from '../lib/supabase';
+import { supabase, supabaseReady, KenaganRow } from '../lib/supabase';
 
 /* ── Types ─────────────────────────────────────────────────────────────── */
 interface StickyNote {
@@ -53,6 +53,18 @@ export function BukuKenangan() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const userId = useRef<string>('');
+
+  if (!supabaseReady) {
+    return (
+      <div className="py-24 px-4 text-center">
+        <div className="inline-block border-4 border-black bg-brutalist-yellow px-8 py-6" style={{ boxShadow: '6px 6px 0 #000' }}>
+          <div className="text-4xl mb-3">📝</div>
+          <h2 className="text-2xl font-black text-black mb-2">BUKU KENANGAN</h2>
+          <p className="font-bold text-black">Fitur ini segera aktif setelah konfigurasi server selesai.</p>
+        </div>
+      </div>
+    );
+  }
 
   /* ── Initial Load ── */
   useEffect(() => {

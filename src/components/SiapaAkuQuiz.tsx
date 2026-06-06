@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import siswaData from '../data/siswa.json';
-import { supabase, QuizScoreRow } from '../lib/supabase';
+import { supabase, supabaseReady, QuizScoreRow } from '../lib/supabase';
 
 interface Siswa {
   id: number;
@@ -83,6 +83,7 @@ export function SiapaAkuQuiz() {
   }, []);
 
   const loadLeaderboard = async () => {
+    if (!supabaseReady) return;
     const { data } = await supabase
       .from('quiz_scores')
       .select('*')
@@ -92,9 +93,9 @@ export function SiapaAkuQuiz() {
   };
 
   const handleSubmitScore = async () => {
-    if (!submitName.trim() || submitting || submitted) return;
+    if (!supabaseReady || !submitName.trim() || submitting || submitted) return;
     setSubmitting(true);
-    const finalScore = score; // captured in closure
+    const finalScore = score;
     const { error } = await supabase
       .from('quiz_scores')
       .insert([{ nama: submitName.trim(), score: finalScore, total: TOTAL_SOAL }]);

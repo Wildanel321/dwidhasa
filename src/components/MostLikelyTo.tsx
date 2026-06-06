@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { supabase, VoteRow } from '../lib/supabase';
+import { supabase, supabaseReady, VoteRow } from '../lib/supabase';
 import kategoriData from '../data/mostLikelyTo.json';
 import siswaData from '../data/siswa.json';
 
@@ -52,6 +52,18 @@ export function MostLikelyTo() {
   const [votingAnim, setVotingAnim]   = useState<number | null>(null);
   const [error, setError]             = useState<string | null>(null);
   const voterId = useRef(getVoterId());
+
+  if (!supabaseReady) {
+    return (
+      <div className="py-24 px-4 text-center">
+        <div className="inline-block border-4 border-black bg-brutalist-blue px-8 py-6" style={{ boxShadow: '6px 6px 0 #000' }}>
+          <div className="text-4xl mb-3">🗳️</div>
+          <h2 className="text-2xl font-black text-black mb-2">MOST LIKELY TO</h2>
+          <p className="font-bold text-black">Fitur voting segera aktif setelah konfigurasi server selesai.</p>
+        </div>
+      </div>
+    );
+  }
 
   /* ── Helpers ── */
   const buildTally = (rows: VoteRow[]): VoteTally => {
