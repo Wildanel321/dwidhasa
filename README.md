@@ -92,7 +92,7 @@ Buka `http://localhost:5173` di browser Anda untuk melihat hasilnya.
 ---
 
 ## 📝 Hak Cipta & Lisensi
-Dibuat oleh **Tim Dwi Dhasa (XII.2)**. 
+Dibuat oleh **Tim IT DwiDhasa (XII.2)**. 
 
 Project ini bersifat tertutup (Private Repository) dan dilindungi oleh Hak Cipta Internasional di bawah lisensi *All Rights Reserved*. Segala bentuk penyalinan, modifikasi, atau distribusi ulang dari kode sumber ini tanpa izin tertulis yang sah adalah dilarang keras secara hukum. 
 
