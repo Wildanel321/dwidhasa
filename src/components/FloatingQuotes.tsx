@@ -1,262 +1,453 @@
-import { useState, useEffect } from 'react';
-import { Quote, RefreshCw, Cloud, Sparkles } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { RefreshCw, Sparkles } from 'lucide-react';
 import siswaData from '../data/siswa.json';
 
-// Injected styles for the falling clouds, atmospheric particles, and floating cards
-const customStyles = `
-  @keyframes floatCard {
-    0%, 100% {
-      transform: translateY(0px) rotate(var(--rotate-deg));
-    }
-    50% {
-      transform: translateY(-16px) rotate(calc(var(--rotate-deg) + 1.5deg));
-    }
+/* ─── Injected CSS Keyframes ─────────────────────────────────────────────── */
+const STYLES = `
+  @keyframes floatCard0 {
+    0%,100% { transform: translateY(0px) rotate(var(--r)); }
+    33%      { transform: translateY(-18px) rotate(calc(var(--r) + 1.5deg)); }
+    66%      { transform: translateY(-8px)  rotate(calc(var(--r) - 0.8deg)); }
+  }
+  @keyframes floatCard1 {
+    0%,100% { transform: translateY(0px) rotate(var(--r)); }
+    40%      { transform: translateY(-22px) rotate(calc(var(--r) - 2deg)); }
+    70%      { transform: translateY(-10px) rotate(calc(var(--r) + 1deg)); }
+  }
+  @keyframes floatCard2 {
+    0%,100% { transform: translateY(-6px) rotate(var(--r)); }
+    50%      { transform: translateY(10px) rotate(calc(var(--r) + 1.2deg)); }
   }
 
-  @keyframes fallCloud {
-    0% {
-      transform: translateY(-150px) translateX(var(--drift-start));
-      opacity: 0;
-    }
-    10% {
-      opacity: var(--base-opacity);
-    }
-    90% {
-      opacity: var(--base-opacity);
-    }
-    100% {
-      transform: translateY(850px) translateX(var(--drift-end));
-      opacity: 0;
-    }
+  @keyframes cloudFall {
+    0%   { transform: translateY(-220px) translateX(0px) scale(var(--cs)); opacity: 0; }
+    8%   { opacity: var(--co); }
+    92%  { opacity: var(--co); }
+    100% { transform: translateY(120%) translateX(var(--cx)) scale(var(--cs)); opacity: 0; }
   }
 
-  @keyframes driftParticle {
-    0% {
-      transform: translateY(700px) translateX(0) scale(0.8);
-      opacity: 0;
-    }
-    10% {
-      opacity: 0.7;
-    }
-    90% {
-      opacity: 0.7;
-    }
-    100% {
-      transform: translateY(-50px) translateX(var(--drift-x)) scale(1.6);
-      opacity: 0;
-    }
+  @keyframes cloudDrift {
+    0%,100% { transform: translateX(0px); }
+    50%     { transform: translateX(var(--cd)); }
+  }
+
+  @keyframes particleRise {
+    0%   { transform: translateY(0px) translateX(0px) scale(0.6); opacity: 0; }
+    10%  { opacity: var(--po); }
+    85%  { opacity: var(--po); }
+    100% { transform: translateY(-110%) translateX(var(--px)) scale(1.8); opacity: 0; }
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+
+  .fq-shimmer {
+    background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.55) 50%, transparent 75%);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .fq-card-hover:hover {
+    filter: brightness(1.06) saturate(1.15);
   }
 `;
 
-interface CloudConfig {
+/* ─── Types ────────────────────────────────────────────────────────────────── */
+interface CloudDef {
   id: number;
   left: string;
-  driftStart: string;
-  driftEnd: string;
-  baseOpacity: number;
-  duration: string;
-  delay: string;
   scale: number;
-}
-
-interface ParticleConfig {
-  id: number;
-  left: string;
-  driftX: string;
+  opacity: number;
   duration: string;
   delay: string;
-  size: number;
+  driftX: string;
+  driftDuration: string;
+  driftDelay: string;
 }
 
-interface QuoteCard {
+interface ParticleDef {
+  id: number;
+  left: string;
+  bottom: string;
+  size: number;
+  color: string;
+  opacity: number;
+  duration: string;
+  delay: string;
+  driftX: string;
+}
+
+interface CardDef {
   id: number;
   nama: string;
   quote: string;
-  bgClass: string;
+  /* absolute position within container */
+  top: string;
+  left: string;
+  width: string;
+  height: string;
   rotate: number;
-  duration: string;
-  delay: string;
+  floatAnim: number;   // 0,1,2 → pick keyframe variant
+  floatDur: string;
+  floatDelay: string;
+  bg: string;
+  border: string;
+  textCol: string;
+  shape: 'rect' | 'wide' | 'tall' | 'square';
+  zIndex: number;
 }
 
-const colors = [
-  'bg-brutalist-pink',
-  'bg-brutalist-yellow',
-  'bg-brutalist-lime',
-  'bg-brutalist-blue',
-  'bg-brutalist-purple',
+/* ─── Constants ────────────────────────────────────────────────────────────── */
+const CARD_THEMES = [
+  { bg: '#fde68a', border: '#92400e', textCol: '#1c1917' }, // amber
+  { bg: '#f9a8d4', border: '#9d174d', textCol: '#1c1917' }, // pink
+  { bg: '#bbf7d0', border: '#166534', textCol: '#1c1917' }, // green
+  { bg: '#a5f3fc', border: '#155e75', textCol: '#1c1917' }, // cyan
+  { bg: '#c4b5fd', border: '#4c1d95', textCol: '#1c1917' }, // purple
+  { bg: '#fed7aa', border: '#9a3412', textCol: '#1c1917' }, // orange
+  { bg: '#bfdbfe', border: '#1e3a5f', textCol: '#1c1917' }, // blue
+  { bg: '#fecaca', border: '#7f1d1d', textCol: '#1c1917' }, // red
 ];
 
-export function FloatingQuotes() {
-  const [activeQuotes, setActiveQuotes] = useState<QuoteCard[]>([]);
-  const [clouds, setClouds] = useState<CloudConfig[]>([]);
-  const [particles, setParticles] = useState<ParticleConfig[]>([]);
+const PARTICLE_COLORS = [
+  'rgba(255,255,255,0.85)',
+  'rgba(186,230,253,0.9)',
+  'rgba(216,180,254,0.8)',
+  'rgba(167,243,208,0.9)',
+  'rgba(253,224,130,0.85)',
+];
 
-  // Function to select 8 random quotes from the student database
-  const loadRandomQuotes = () => {
-    // Filter out students with very short quotes or empty quotes
-    const eligibleStudents = siswaData.filter(s => s.quote && s.quote.trim().length > 2);
-    
-    // Shuffle and pick 8
-    const shuffled = [...eligibleStudents].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 8);
+const SHAPES: CardDef['shape'][] = ['rect', 'wide', 'tall', 'square'];
 
-    const cards: QuoteCard[] = selected.map((s, idx) => {
-      // Pick random background color
-      const bgClass = colors[idx % colors.length];
-      // Random rotation between -4deg and 4deg
-      const rotate = Math.floor(Math.random() * 9) - 4; // -4 to 4
-      // Random animation duration between 5s and 8s
-      const duration = `${(Math.random() * 3 + 5).toFixed(1)}s`;
-      // Random delay
-      const delay = `${(Math.random() * 2).toFixed(1)}s`;
+function rnd(min: number, max: number) {
+  return Math.random() * (max - min) + min;
+}
+function pick<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
 
-      return {
-        id: s.id,
-        nama: s.nama,
-        quote: s.quote,
-        bgClass,
-        rotate,
-        duration,
-        delay,
-      };
-    });
+/* ─── Generate helpers ─────────────────────────────────────────────────────── */
+function genClouds(): CloudDef[] {
+  return Array.from({ length: 9 }).map((_, i) => ({
+    id: i,
+    left: `${rnd(0, 95)}%`,
+    scale: rnd(0.5, 1.4),
+    opacity: rnd(0.18, 0.50),
+    duration: `${rnd(18, 40).toFixed(1)}s`,
+    delay: `${rnd(-30, 0).toFixed(1)}s`,
+    driftX: `${rnd(-40, 40).toFixed(0)}px`,
+    driftDuration: `${rnd(6, 14).toFixed(1)}s`,
+    driftDelay: `${rnd(-8, 0).toFixed(1)}s`,
+  }));
+}
 
-    setActiveQuotes(cards);
+function genParticles(): ParticleDef[] {
+  return Array.from({ length: 45 }).map((_, i) => ({
+    id: i,
+    left: `${rnd(0, 100)}%`,
+    bottom: `${rnd(0, 5)}%`,
+    size: rnd(2, 7),
+    color: pick(PARTICLE_COLORS),
+    opacity: rnd(0.4, 0.9),
+    duration: `${rnd(7, 18).toFixed(1)}s`,
+    delay: `${rnd(-15, 0).toFixed(1)}s`,
+    driftX: `${rnd(-60, 60).toFixed(0)}px`,
+  }));
+}
+
+function genCards(students: typeof siswaData): CardDef[] {
+  const eligible = students.filter(s => s.quote && s.quote.trim().length > 3);
+  const shuffled = [...eligible].sort(() => Math.random() - 0.5).slice(0, 8);
+
+  // We lay cards out in a pseudo-random absolute position grid
+  // Divide container into a 4×2 grid of rough cells for non-overlapping base positions
+  const cells = [
+    { cx: 2,  cy: 5  },
+    { cx: 28, cy: 2  },
+    { cx: 55, cy: 6  },
+    { cx: 76, cy: 3  },
+    { cx: 5,  cy: 52 },
+    { cx: 30, cy: 49 },
+    { cx: 57, cy: 53 },
+    { cx: 75, cy: 50 },
+  ];
+
+  const shapeDims: Record<CardDef['shape'], { w: string; h: string }> = {
+    rect:   { w: '220px', h: '200px' },
+    wide:   { w: '280px', h: '160px' },
+    tall:   { w: '190px', h: '240px' },
+    square: { w: '210px', h: '210px' },
   };
 
-  // Generate clouds & particles on mount
+  return shuffled.map((s, idx) => {
+    const theme = CARD_THEMES[idx % CARD_THEMES.length];
+    const shape = SHAPES[idx % SHAPES.length];
+    const cell = cells[idx];
+    const jitterX = rnd(-4, 4);
+    const jitterY = rnd(-3, 3);
+
+    return {
+      id: s.id,
+      nama: s.nama,
+      quote: s.quote,
+      top: `${(cell.cy + jitterY).toFixed(1)}%`,
+      left: `${(cell.cx + jitterX).toFixed(1)}%`,
+      width: shapeDims[shape].w,
+      height: shapeDims[shape].h,
+      rotate: rnd(-6, 6),
+      floatAnim: idx % 3,
+      floatDur: `${rnd(5, 9).toFixed(1)}s`,
+      floatDelay: `${rnd(0, 3).toFixed(1)}s`,
+      bg: theme.bg,
+      border: theme.border,
+      textCol: theme.textCol,
+      shape,
+      zIndex: 10 + idx,
+    };
+  });
+}
+
+/* ─── Cloud SVG ────────────────────────────────────────────────────────────── */
+function CloudShape({ opacity }: { opacity: number }) {
+  return (
+    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <ellipse cx="100" cy="85" rx="90" ry="35" fill={`rgba(255,255,255,${opacity + 0.15})`} />
+      <ellipse cx="70"  cy="70" rx="50" ry="38" fill={`rgba(255,255,255,${opacity + 0.05})`} />
+      <ellipse cx="125" cy="65" rx="45" ry="35" fill={`rgba(255,255,255,${opacity + 0.10})`} />
+      <ellipse cx="95"  cy="55" rx="38" ry="30" fill={`rgba(255,255,255,${opacity + 0.20})`} />
+    </svg>
+  );
+}
+
+/* ─── Main Component ────────────────────────────────────────────────────────── */
+export function FloatingQuotes() {
+  const [cards, setCards] = useState<CardDef[]>([]);
+  const [clouds] = useState<CloudDef[]>(genClouds);
+  const [particles] = useState<ParticleDef[]>(genParticles);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [containerH, setContainerH] = useState(620);
+
+  const shuffle = () => setCards(genCards(siswaData));
+
   useEffect(() => {
-    loadRandomQuotes();
+    shuffle();
+  }, []);
 
-    // Generate clouds config
-    const generatedClouds: CloudConfig[] = Array.from({ length: 6 }).map((_, idx) => ({
-      id: idx,
-      left: `${idx * 18 + 5 + Math.random() * 5}%`,
-      driftStart: `${(Math.random() * 40 - 20).toFixed(0)}px`,
-      driftEnd: `${(Math.random() * 60 - 30).toFixed(0)}px`,
-      baseOpacity: Number((Math.random() * 0.3 + 0.3).toFixed(2)),
-      duration: `${(Math.random() * 15 + 20).toFixed(0)}s`,
-      delay: `${(Math.random() * -15).toFixed(0)}s`, // Negative delay to start immediately mid-animation
-      scale: Number((Math.random() * 0.8 + 0.6).toFixed(2)),
-    }));
-    setClouds(generatedClouds);
-
-    // Generate particles config
-    const generatedParticles: ParticleConfig[] = Array.from({ length: 30 }).map((_, idx) => ({
-      id: idx,
-      left: `${Math.random() * 100}%`,
-      driftX: `${(Math.random() * 80 - 40).toFixed(0)}px`,
-      duration: `${(Math.random() * 8 + 8).toFixed(0)}s`,
-      delay: `${(Math.random() * -10).toFixed(0)}s`,
-      size: Math.floor(Math.random() * 4) + 3, // 3px to 6px
-    }));
-    setParticles(generatedParticles);
+  // Dynamically size container so all cards are visible
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const obs = new ResizeObserver(() => {
+      const w = containerRef.current?.offsetWidth ?? 0;
+      // Taller on narrow screens
+      setContainerH(w < 768 ? 1200 : 640);
+    });
+    obs.observe(containerRef.current);
+    return () => obs.disconnect();
   }, []);
 
   return (
-    <section className="py-12 transition-colors duration-500 overflow-hidden">
-      <style>{customStyles}</style>
+    <section className="py-16 overflow-hidden transition-colors duration-500">
+      <style>{STYLES}</style>
 
-      <div className="container mx-auto px-6">
-        {/* Dedicated Box Container with Neobrutalism Border & Separate Theme */}
-        <div className="relative bg-gradient-to-b from-[#7dd3fc] via-[#a5b4fc] to-[#c084fc] dark:from-dark-200 dark:via-purple-950 dark:to-indigo-950 border-8 border-black p-8 md:p-12 shadow-brutalist-lg overflow-hidden rounded-none">
-          
-          {/* Ambient Atmospherics */}
-          {/* Clouds */}
+      <div className="container mx-auto px-4 md:px-8">
+        {/* ── Outer Box ── */}
+        <div
+          className="relative overflow-hidden"
+          style={{
+            background: 'linear-gradient(160deg, #0ea5e9 0%, #6366f1 40%, #a855f7 70%, #ec4899 100%)',
+            border: '5px solid #000',
+            boxShadow: '8px 8px 0 #000',
+          }}
+        >
+          {/* Noise overlay for texture */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'300\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.75\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'300\' height=\'300\' filter=\'url(%23n)\' opacity=\'0.04\'/%3E%3C/svg%3E")',
+              opacity: 0.25,
+            }}
+          />
+
+          {/* ── Falling Clouds Layer ── */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-            {clouds.map(cloud => (
+            {clouds.map(c => (
               <div
-                key={cloud.id}
-                className="absolute text-white dark:text-sky-200/40"
+                key={c.id}
+                className="absolute"
                 style={{
-                  left: cloud.left,
+                  left: c.left,
                   top: 0,
-                  transform: `scale(${cloud.scale})`,
-                  animation: `fallCloud ${cloud.duration} linear infinite`,
-                  animationDelay: cloud.delay,
-                  // Custom properties for keyframe interpolations
-                  ['--drift-start' as any]: cloud.driftStart,
-                  ['--drift-end' as any]: cloud.driftEnd,
-                  ['--base-opacity' as any]: cloud.baseOpacity,
+                  width: `${c.scale * 140}px`,
+                  height: `${c.scale * 85}px`,
+                  animation: `cloudFall ${c.duration} linear infinite`,
+                  animationDelay: c.delay,
+                  ['--cs' as any]: c.scale,
+                  ['--co' as any]: c.opacity,
+                  ['--cx' as any]: c.driftX,
                 }}
               >
-                <Cloud className="w-24 h-24 fill-current drop-shadow-md" />
+                {/* inner drift */}
+                <div
+                  style={{
+                    animation: `cloudDrift ${c.driftDuration} ease-in-out infinite alternate`,
+                    animationDelay: c.driftDelay,
+                    ['--cd' as any]: c.driftX,
+                    width: '100%',
+                    height: '100%',
+                  }}
+                >
+                  <CloudShape opacity={c.opacity} />
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Particles */}
+          {/* ── Atmospheric Particles Layer ── */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
             {particles.map(p => (
               <div
                 key={p.id}
-                className="absolute bg-white dark:bg-yellow-200 rounded-full"
+                className="absolute rounded-full"
                 style={{
                   left: p.left,
-                  top: 0,
+                  bottom: p.bottom,
                   width: `${p.size}px`,
                   height: `${p.size}px`,
-                  boxShadow: '0 0 8px 2px rgba(255, 255, 255, 0.4)',
-                  animation: `driftParticle ${p.duration} ease-in-out infinite`,
+                  background: p.color,
+                  boxShadow: `0 0 ${p.size * 3}px ${p.size}px ${p.color}`,
+                  animation: `particleRise ${p.duration} ease-in-out infinite`,
                   animationDelay: p.delay,
-                  ['--drift-x' as any]: p.driftX,
+                  ['--po' as any]: p.opacity,
+                  ['--px' as any]: p.driftX,
                 }}
               />
             ))}
           </div>
 
-          {/* Section Content (Z-Index is higher to sit on top of clouds & particles) */}
-          <div className="relative z-10 flex flex-col items-center">
-            
-            {/* Neobrutalist Title */}
-            <div className="flex flex-col md:flex-row items-center justify-between w-full mb-12 gap-6">
-              <div className="inline-flex items-center gap-3 bg-brutalist-lime border-4 border-black px-6 py-3 shadow-brutalist -rotate-1">
-                <Sparkles className="w-8 h-8 text-black animate-spin" style={{ animationDuration: '6s' }} />
-                <h2 className="text-2xl md:text-4xl font-black text-black uppercase tracking-tighter">
-                  Quotes
+          {/* ── Content (above fx layers) ── */}
+          <div className="relative z-10 p-6 md:p-10">
+
+            {/* ── Header row ── */}
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+              <div
+                className="inline-flex items-center gap-3 px-5 py-3"
+                style={{
+                  background: '#facc15',
+                  border: '4px solid #000',
+                  boxShadow: '4px 4px 0 #000',
+                  transform: 'rotate(-1.5deg)',
+                }}
+              >
+                <Sparkles className="w-7 h-7 text-black animate-pulse" />
+                <h2 className="text-2xl md:text-3xl font-black text-black uppercase tracking-tighter leading-none">
+                  Quotes Kelas XII.2
                 </h2>
               </div>
 
-              {/* Shuffle button */}
               <button
-                onClick={loadRandomQuotes}
-                className="flex items-center gap-2 px-6 py-3 bg-brutalist-yellow border-4 border-black font-black text-black shadow-brutalist hover:bg-brutalist-pink active:shadow-none active:translate-x-1 active:translate-y-1 transition-all"
-                title="Acak Kutipan"
+                onClick={shuffle}
+                className="fq-card-hover inline-flex items-center gap-2 px-5 py-3 font-black text-black uppercase transition-all active:translate-x-1 active:translate-y-1"
+                style={{
+                  background: '#f0abfc',
+                  border: '4px solid #000',
+                  boxShadow: '4px 4px 0 #000',
+                  transition: 'box-shadow .15s, transform .15s',
+                }}
+                onMouseDown={e => (e.currentTarget.style.boxShadow = 'none')}
+                onMouseUp={e => (e.currentTarget.style.boxShadow = '4px 4px 0 #000')}
               >
-                <RefreshCw className="w-5 h-5 font-black text-black" />
-                <span>ACAK QUOTE</span>
+                <RefreshCw className="w-5 h-5" />
+                Acak Quote
               </button>
             </div>
 
-            {/* Grid of Floating Quote Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full mt-4">
-              {activeQuotes.map((card) => (
+            {/* ── Cards Wrapper (relative + fixed height so cards can be absolute) ── */}
+            <div
+              ref={containerRef}
+              className="relative w-full"
+              style={{ height: `${containerH}px` }}
+            >
+              {cards.map(card => (
                 <div
                   key={card.id}
-                  className="relative group transition-transform duration-300 hover:scale-105"
+                  className="absolute fq-card-hover cursor-default select-none"
                   style={{
-                    animation: `floatCard ${card.duration} ease-in-out infinite`,
-                    animationDelay: card.delay,
-                    ['--rotate-deg' as any]: `${card.rotate}deg`,
+                    top: card.top,
+                    left: card.left,
+                    width: card.width,
+                    height: card.height,
+                    zIndex: card.zIndex,
+                    animation: `floatCard${card.floatAnim} ${card.floatDur} ease-in-out infinite`,
+                    animationDelay: card.floatDelay,
+                    ['--r' as any]: `${card.rotate}deg`,
+                    transform: `rotate(${card.rotate}deg)`,
+                    transition: 'filter .2s',
                   }}
                 >
-                  {/* Card Shadow */}
-                  <div className="absolute inset-0 bg-brutalist-black translate-x-2 translate-y-2 transition-transform group-hover:translate-x-3 group-hover:translate-y-3" />
-                  
-                  {/* Card Box */}
-                  <div className={`relative ${card.bgClass} border-4 border-black p-6 flex flex-col justify-between h-64 shadow-brutalist`}>
-                    <div className="relative">
-                      <Quote className="w-8 h-8 text-black/20 absolute -top-4 -left-3" />
-                      <p className="text-sm font-bold text-black italic line-clamp-6 relative z-10 pt-2 leading-relaxed">
-                        "{card.quote}"
+                  {/* Shadow block */}
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: '#000',
+                      transform: 'translate(5px, 5px)',
+                      border: `4px solid #000`,
+                    }}
+                  />
+
+                  {/* Card face */}
+                  <div
+                    className="absolute inset-0 flex flex-col justify-between overflow-hidden"
+                    style={{
+                      background: card.bg,
+                      border: `4px solid ${card.border}`,
+                    }}
+                  >
+                    {/* Shimmer overlay */}
+                    <div className="fq-shimmer absolute inset-0 pointer-events-none" />
+
+                    {/* Quote text */}
+                    <div className="relative flex-1 p-4 overflow-hidden">
+                      <span
+                        className="absolute top-2 left-3 font-black select-none"
+                        style={{ fontSize: '3.5rem', lineHeight: 1, color: `${card.border}30` }}
+                      >
+                        "
+                      </span>
+                      <p
+                        className="relative text-xs font-bold leading-relaxed italic pt-5"
+                        style={{
+                          color: card.textCol,
+                          display: '-webkit-box',
+                          WebkitLineClamp: card.shape === 'wide' ? 4 : 6,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden',
+                        }}
+                      >
+                        {card.quote}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t-2 border-black/10 flex flex-col">
-                      <span className="text-xs font-black text-black/50 uppercase tracking-wider">
-                        Kutipan Oleh:
+                    {/* Name footer */}
+                    <div
+                      className="px-4 py-2 flex flex-col"
+                      style={{
+                        background: `${card.border}22`,
+                        borderTop: `2px solid ${card.border}66`,
+                      }}
+                    >
+                      <span
+                        className="text-[10px] font-black uppercase tracking-widest"
+                        style={{ color: `${card.border}99` }}
+                      >
+                        — by
                       </span>
-                      <span className="text-sm font-black text-black uppercase tracking-tighter truncate" title={card.nama}>
+                      <span
+                        className="text-xs font-black uppercase truncate"
+                        style={{ color: card.border }}
+                        title={card.nama}
+                      >
                         {card.nama}
                       </span>
                     </div>
@@ -264,7 +455,6 @@ export function FloatingQuotes() {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </div>
