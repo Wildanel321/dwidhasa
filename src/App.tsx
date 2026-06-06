@@ -19,6 +19,7 @@ import { BukuKenangan } from './components/BukuKenangan';
 import { SiapaAkuQuiz } from './components/SiapaAkuQuiz';
 import { RandomSiswa } from './components/RandomSiswa';
 import { MostLikelyTo } from './components/MostLikelyTo';
+import { StatusBar } from './components/StatusBar';
 import siswaData from './data/siswa.json';
 import galeriData from './data/galeri.json';
 
@@ -84,6 +85,7 @@ function App() {
       <BukuKenangan />
 
       <Footer />
+      <StatusBar />
     </div>
   );
 }
