@@ -234,7 +234,7 @@ export function RandomSiswa() {
               textShadow: '0 0 20px #FFD700, 0 0 40px #FF6600, 0 0 60px #FF6600',
             }}
           >
-            🎰 SLOT SISWA
+            ⚡ SLOT SISWA ⚡
           </h1>
           <p className="text-gray-400 font-bold text-lg">Spin untuk pilih siswa random!</p>
         </div>
