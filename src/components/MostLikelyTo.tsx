@@ -86,7 +86,8 @@ export function MostLikelyTo() {
         .eq('kategori_id', selectedId);
 
       if (err) {
-        setError('Gagal memuat data voting.');
+        console.error('Supabase Select Error:', err);
+        setError(`Gagal memuat data voting: ${err.message}`);
       } else {
         const rows = data as VoteRow[];
         setTally(buildTally(rows));
@@ -141,7 +142,10 @@ export function MostLikelyTo() {
       .from('votes')
       .insert([{ kategori_id: selectedId, siswa_id: siswaId, voter_id: voterId.current }]);
 
-    if (err) setError('Gagal menyimpan vote. Coba lagi!');
+    if (err) {
+      console.error('Supabase Insert Error:', err);
+      setError(`Gagal menyimpan vote: ${err.message}`);
+    }
   };
 
   /* ── Ganti vote ── */
