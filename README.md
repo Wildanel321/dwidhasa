@@ -56,28 +56,6 @@ Website ini mengusung tema **Neobrutalism UI** dengan karakteristik:
 
 ---
 
-## 💻 Cara Menjalankan Project Secara Lokal
-
-### Prasyarat
-Pastikan Anda sudah menginstal **Node.js** di komputer Anda.
-
-### 1. Instal Dependensi
-Buka terminal di dalam folder project ini, lalu jalankan:
-```bash
-npm install
-```
-
-### 2. Konfigurasi Environment Variables
-Pastikan file `.env` sudah diisi dengan kredensial API (Supabase & Groq).
-
-### 3. Jalankan Mode Development
-```bash
-npm run dev
-```
-Buka `http://localhost:5173` di browser Anda untuk melihat hasilnya.
-
----
-
 ## 📝 Hak Cipta & Lisensi
 Dibuat oleh **Tim IT DwiDhasa (XII.2)**. 
 
