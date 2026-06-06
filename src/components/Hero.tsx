@@ -87,6 +87,8 @@ export function Hero() {
             { label: 'Galeri', id: 'galeri', color: 'bg-brutalist-pink', isRoute: false },
             { label: 'Permainan', id: '/permainan', color: 'bg-brutalist-blue', isRoute: true },
             { label: 'Penghargaan', id: '/penghargaan', color: 'bg-brutalist-yellow', isRoute: true },
+            { label: 'Statistik', id: '/statistik', color: 'bg-brutalist-lime', isRoute: true },
+            { label: 'Quotes', id: '/quotes', color: 'bg-brutalist-purple', isRoute: true },
           ].map((item) => (
             <button
               key={item.id}

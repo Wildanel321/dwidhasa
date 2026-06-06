@@ -8,6 +8,8 @@ import { HomePage } from './pages/HomePage';
 import { PermainanPage } from './pages/PermainanPage';
 import { PenghargaanPage } from './pages/PenghargaanPage';
 import { ChatPage } from './pages/ChatPage';
+import { QuotesPage } from './pages/QuotesPage';
+import { StatistikPage } from './pages/StatistikPage';
 import siswaData from './data/siswa.json';
 import galeriData from './data/galeri.json';
 
@@ -59,6 +61,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/permainan" element={<PermainanPage />} />
         <Route path="/penghargaan" element={<PenghargaanPage />} />
+        <Route path="/quotes" element={<QuotesPage />} />
+        <Route path="/statistik" element={<StatistikPage />} />
         <Route path="/chat" element={<ChatPage />} />
       </Routes>
     </div>
