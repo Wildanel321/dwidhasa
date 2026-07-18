@@ -1,4 +1,4 @@
-import { RandomSiswa } from '../components/RandomSiswa';
+import { KuisLink } from '../components/KuisLink';
 import { SiapaAkuQuiz } from '../components/SiapaAkuQuiz';
 import { MostLikelyTo } from '../components/MostLikelyTo';
 import { Footer } from '../components/Footer';
@@ -16,7 +16,7 @@ export function PermainanPage() {
         </Link>
       </div>
 
-      <RandomSiswa />
+      <KuisLink />
       <SiapaAkuQuiz />
       <MostLikelyTo />
       
